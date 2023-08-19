@@ -6,35 +6,35 @@ print('')
 while True:
   opcaodesafio = input(
     print(
-      'QUal desafio deseja ver agora? \nTecle s ou sair para finalizar o programa. \n'
+      '\nQUal desafio deseja ver agora? \nTecle s ou sair para finalizar o programa. \n'
     ))
   if opcaodesafio in ('s', 'sair'):
     print('Foi um prazer tê-lo aqui, até a próxima!')
     break
 
-  if opcaodesafio == '1':
+  elif opcaodesafio == '1':
     print("=" * 60)
     print(f"{'Desafio 1 Curso em Vídeo Pyhton':^60}")
     print("=" * 60)
     print('')
-    print('Olá Mundo \n')
+    print('Olá Mundo')
 
-  if opcaodesafio == '2':
+  elif opcaodesafio == '2':
     print('=' * 60)
     print(f"{'Desafio 2 Curso em Vídeo Python:':^60}")
     print('=' * 60)
     nome = input('Qual o seu nome? ')
-    print(f"É um prazer conhecer você {nome}! \n")
+    print(f"É um prazer conhecer você {nome}!")
 
-  if opcaodesafio == '3':
+  elif opcaodesafio == '3':
     print('=' * 60)
     print(f"{'Desafio 3 Curso em Vídeo Python:':^60}")
     print('=' * 60)
     n1 = int(input('Informe um número: '))
     n2 = int(input('Informe outro número: '))
-    print(f"A soma entre {n1} e {n2} é igual a {n1+n2}. \n")
+    print(f"A soma entre {n1} e {n2} é igual a {n1+n2}.")
 
-  if opcaodesafio == '4':
+  elif opcaodesafio == '4':
     print('=' * 60)
     print(f"{'Desafio 4 Curso em Vídeo Python:':^60}")
     print('=' * 60)
@@ -47,18 +47,17 @@ while True:
     print(f"É alfanumérico? {algo.isalnum()}")
     print(f"Está em maiúsculas? {algo.isupper()}")
     print(f"Está em minúsculas? {algo.islower()}")
-    print(f"Está capitalizada? {algo.istitle()} \n")
+    print(f"Está capitalizada? {algo.istitle()}")
 
-  if opcaodesafio == '5':
+  elif opcaodesafio == '5':
     print('=' * 60)
     print(f"{'Desafio 5 Curso em Vídeo Python:':^60}")
     print('=' * 60)
     print('')
     n = int(input("Digite um número inteiro: "))
-    print(
-      f"Analisando o valor {n}, o antecessor é {n-1} e o sucessor é {n+1} \n")
+    print(f"Analisando o valor {n}, o antecessor é {n-1} e o sucessor é {n+1}")
 
-  if opcaodesafio == '6':
+  elif opcaodesafio == '6':
     print('=' * 60)
     print(f"{'Desafio 6 Curso em Vídeo Python:':^60}")
     print('=' * 60, '\n')
