@@ -66,5 +66,13 @@ while True:
       f"O dobro de {n} vale {n*2}. \nO triplo de {n} vale {n*3}. \nA raiz quadrada de {n} vale {n**(1/2):.2f}."
     )
 
+  elif opcaodesafio == '7':
+    print('=' * 60)
+    print(f"{'Desafio 7 Curso em Vídeo Python:':^60}")
+    print('=' * 60, '\n')
+    n1 = float(input("Primeira nota do aluno: "))
+    n2 = float(input("Segunda nota do aluno: "))
+    print(f"A média entre {n1} e {n2} é igual a {(n1+n2)/2:.1f}")
+
   else:
     print("Infálido ou ainda não existe!")
