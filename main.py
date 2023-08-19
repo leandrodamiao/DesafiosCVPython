@@ -49,5 +49,23 @@ while True:
     print(f"Está em minúsculas? {algo.islower()}")
     print(f"Está capitalizada? {algo.istitle()} \n")
 
+  if opcaodesafio == '5':
+    print('=' * 60)
+    print(f"{'Desafio 5 Curso em Vídeo Python:':^60}")
+    print('=' * 60)
+    print('')
+    n = int(input("Digite um número inteiro: "))
+    print(
+      f"Analisando o valor {n}, o antecessor é {n-1} e o sucessor é {n+1} \n")
+
+  if opcaodesafio == '6':
+    print('=' * 60)
+    print(f"{'Desafio 6 Curso em Vídeo Python:':^60}")
+    print('=' * 60, '\n')
+    n = int(input("Digite um número: "))
+    print(
+      f"O dobro de {n} vale {n*2}. \nO triplo de {n} vale {n*3}. \nA raiz quadrada de {n} vale {n**(1/2):.2f}."
+    )
+
   else:
     print("Infálido ou ainda não existe!")
