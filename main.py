@@ -1,3 +1,5 @@
+'''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
+
 print("=" * 25)
 print(f"{'Desafios Pyhton':^25}")
 print("=" * 25)
@@ -83,6 +85,31 @@ while True:
     print(
       f"{distancia/1000}km \n{distancia/100}hm \n{distancia/10}dam \n{distancia*10:.0f}dm \n{distancia*100:.0f}cm \n{distancia*1000:.0f}mm"
     )
+
+  elif opcaodesafio == '9':
+    print('=' * 25)
+    print(f"{'D9 - Tabuada 1.0':^25}")
+    print('=' * 25)
+    numtab = int(input('Digite um número para ver sua tabuada: '))
+    print('_' * 15)
+    print(f"{numtab} x  1 = {numtab*1:>3}")
+    print(f"{numtab} x  2 = {numtab*2:>3}")
+    print(f"{numtab} x  3 = {numtab*3:>3}")
+    print(f"{numtab} x  4 = {numtab*4:>3}")
+    print(f"{numtab} x  5 = {numtab*5:>3}")
+    print(f"{numtab} x  6 = {numtab*6:>3}")
+    print(f"{numtab} x  7 = {numtab*7:>3}")
+    print(f"{numtab} x  8 = {numtab*8:>3}")
+    print(f"{numtab} x  9 = {numtab*9:>3}")
+    print(f"{numtab} x 10 = {numtab*10:>3}")
+    print('_' * 15)
+
+  elif opcaodesafio == '10':
+    print('=' * 25)
+    print(f"{'D10 - Conversor de Moedas':^25}")
+    print('=' * 25)
+    dinheiro = float(input('Quanto dinheiro você tem na carteira R$'))
+    print(f"Com {dinheiro} você pode comprar US${dinheiro / 3.27:.2f}")
 
   else:
     print("Infálido ou ainda não existe!")
