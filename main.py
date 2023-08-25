@@ -123,5 +123,14 @@ while True:
       f"Sua parede tem a dimensão de {largura}x{altura} e sua área é {largura*altura:.3f}m².\nPara pintar essa parede, você precisará de {(largura*altura)/2:.3f}l de tinta."
     )
 
+  elif opcaodesafio == '12':
+    print('=' * 25)
+    print(f"{'D12 - Calculando Descontos':^25}")
+    print('=' * 25)
+    precoproduto = float(input('Qual é o preço do produto? R$'))
+    print(
+      f"O produto que custava R${precoproduto} com 5% de desconto vai custar R${precoproduto - (precoproduto*0.05):.2f}"
+    )
+
   else:
     print("Infálido ou ainda não existe!")
