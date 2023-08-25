@@ -109,7 +109,19 @@ while True:
     print(f"{'D10 - Conversor de Moedas':^25}")
     print('=' * 25)
     dinheiro = float(input('Quanto dinheiro você tem na carteira R$'))
-    print(f"Com {dinheiro} você pode comprar US${dinheiro / 3.27:.2f}")
+    print(
+      f"Com {dinheiro} (no dia 24/08/2023) você pode comprar US${dinheiro / 4.88:.2f}"
+    )
+
+  elif opcaodesafio == '11':
+    print('=' * 25)
+    print(f"{'D11 - Pintando Parede':^25}")
+    print('=' * 25)
+    largura = float(input('Largura da parede: '))
+    altura = float(input('Altura da parede: '))
+    print(
+      f"Sua parede tem a dimensão de {largura}x{altura} e sua área é {largura*altura:.3f}m².\nPara pintar essa parede, você precisará de {(largura*altura)/2:.3f}l de tinta."
+    )
 
   else:
     print("Infálido ou ainda não existe!")
