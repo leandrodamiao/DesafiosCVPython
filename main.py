@@ -150,5 +150,14 @@ while True:
       f"A temperatura de {temperatura}ºC corresponde a {1.8*temperatura+32}ºF!"
     )
 
+  elif opcaodesafio == '15':
+    print('=' * 25)
+    print(f"{'D15 - Aluguel de Carros':^25}")
+    print('=' * 25)
+    diasalugados = int(input('Quantos dias alugados? '))
+    kmrodados = float(input('Quantos Km rodados? '))
+    preco_aluguel_carro = (diasalugados * 60) + (kmrodados * 0.15)
+    print(f"O total a pagar é de R${preco_aluguel_carro:.2f}")
+
   else:
     print("Infálido ou ainda não existe!")
