@@ -132,5 +132,23 @@ while True:
       f"O produto que custava R${precoproduto} com 5% de desconto vai custar R${precoproduto - (precoproduto*0.05):.2f}"
     )
 
+  elif opcaodesafio == '13':
+    print('=' * 25)
+    print(f"{'D13 - Reajuste Salarial':^25}")
+    print('=' * 25)
+    salario = float(input('Qual é o salário do funcionário? R$'))
+    print(
+      f"Um funcionário que ganhava R${salario} passa a receber R${salario + (salario*15/100):.2f} com o aumento de 15%."
+    )
+
+  elif opcaodesafio == '14':
+    print('=' * 25)
+    print(f"{'D14 - Conversor de Temp':^25}")
+    print('=' * 25)
+    temperatura = float(input('Informe a temperatura em ºC: '))
+    print(
+      f"A temperatura de {temperatura}ºC corresponde a {1.8*temperatura+32}ºF!"
+    )
+
   else:
     print("Infálido ou ainda não existe!")
