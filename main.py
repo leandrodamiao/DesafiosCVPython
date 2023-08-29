@@ -159,5 +159,10 @@ while True:
     preco_aluguel_carro = (diasalugados * 60) + (kmrodados * 0.15)
     print(f"O total a pagar é de R${preco_aluguel_carro:.2f}")
 
+  elif opcaodesafio == '16':
+    print('=' * 25)
+    print(f"{'D16 - ':^25}")
+    print('=' * 25)
+
   else:
     print("Infálido ou ainda não existe!")
