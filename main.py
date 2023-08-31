@@ -1,3 +1,4 @@
+import math
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -161,8 +162,13 @@ while True:
 
   elif opcaodesafio == '16':
     print('=' * 25)
-    print(f"{'D16 - ':^25}")
+    print(f"{'D16 - QUbrando um Número':^25}")
     print('=' * 25)
+    numero = float(input('Digite um valor: '))
+    valor_quebrado = math.floor(numero)
+    print(
+      f"O valor digitaro foi {numero} e sua porção inteira é {valor_quebrado}")
+    #print(f"O valor digitado foi {numero} e a sua porção inteiro é {int(numero)}")
 
   else:
     print("Infálido ou ainda não existe!")
