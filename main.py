@@ -1,4 +1,5 @@
 import math
+from random import choice
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -191,6 +192,17 @@ while True:
     print(
       f"O ângulo de {angulo} tem: \n \nSENO = {math.sin(math.radians(angulo)):.2f} \nCOSSENO = {math.cos(math.radians(angulo)):.2f} \nTANGENTE = {math.tan(math.radians(angulo)):.2f}"
     )
+
+  elif opcaodesafio == '19':
+    print('=' * 25)
+    print(f"{'D19 - Sorteio Item Lista':^25}")
+    print('=' * 25)
+    aluno1 = str(input('Primeiro aluno: '))
+    aluno2 = str(input('Segundo Aluno: '))
+    aluno3 = str(input('Terceiro aluno: '))
+    aluno4 = str(input('Quarto aluno: '))
+    sorteio_aluno = aluno1, aluno2, aluno3, aluno4
+    print(f"O aluno escolhido foi {choice(sorteio_aluno)}")
 
   else:
     print("Infálido ou ainda não existe!")
