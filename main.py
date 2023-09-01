@@ -170,5 +170,18 @@ while True:
       f"O valor digitaro foi {numero} e sua porção inteira é {valor_quebrado}")
     #print(f"O valor digitado foi {numero} e a sua porção inteiro é {int(numero)}")
 
+  elif opcaodesafio == '17':
+    print('=' * 25)
+    print(f"{'D17 - Catetos Hipotenusa':^25}")
+    print('=' * 25)
+    cateto_oposto = float(input('Comprimento do cateto oposto: '))
+    cateto_adjacente = float(input('Comprimento do cateto adjacente: '))
+    hipoten = math.hypot(cateto_oposto, cateto_adjacente)
+    print(f"A hipotenusa vai medir {hipoten:.2f}")
+    print('OU')
+    print(
+      f"({cateto_oposto}² x {cateto_adjacente}²) = Hipotenusa² - sendo assim o valor é {hipoten:.2f}"
+    )
+
   else:
     print("Infálido ou ainda não existe!")
