@@ -183,5 +183,14 @@ while True:
       f"({cateto_oposto}² + {cateto_adjacente}²) = Hipotenusa² - sendo assim o valor é {((cateto_oposto**2)+(cateto_adjacente**2))**(1/2):.2f}"
     )
 
+  elif opcaodesafio == '18':
+    print('=' * 25)
+    print(f"{'D18 - Seno Cos. Tang.':^25}")
+    print('=' * 25)
+    angulo = float(input('Digite o ângulo desejado: '))
+    print(
+      f"O ângulo de {angulo} tem: \n \nSENO = {math.sin(math.radians(angulo)):.2f} \nCOSSENO = {math.cos(math.radians(angulo)):.2f} \nTANGENTE = {math.tan(math.radians(angulo)):.2f}"
+    )
+
   else:
     print("Infálido ou ainda não existe!")
