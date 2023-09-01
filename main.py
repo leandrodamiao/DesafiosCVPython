@@ -180,7 +180,7 @@ while True:
     print(f"A hipotenusa vai medir {hipoten:.2f}")
     print('OU')
     print(
-      f"({cateto_oposto}² x {cateto_adjacente}²) = Hipotenusa² - sendo assim o valor é {hipoten:.2f}"
+      f"({cateto_oposto}² + {cateto_adjacente}²) = Hipotenusa² - sendo assim o valor é {((cateto_oposto**2)+(cateto_adjacente**2))**(1/2):.2f}"
     )
 
   else:
