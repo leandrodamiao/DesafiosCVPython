@@ -1,5 +1,5 @@
 import math
-from random import choice
+from random import choice, shuffle
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -203,6 +203,17 @@ while True:
     aluno4 = str(input('Quarto aluno: '))
     sorteio_aluno = aluno1, aluno2, aluno3, aluno4
     print(f"O aluno escolhido foi {choice(sorteio_aluno)}")
+
+  elif opcaodesafio == '20':
+    print('=' * 25)
+    print(f"{'D20 - Sorteio ordem na lista':^25}")
+    a1 = str(input('Primeiro aluno: '))
+    a2 = str(input('Primeiro aluno: '))
+    a3 = str(input('Primeiro aluno: '))
+    a4 = str(input('Primeiro aluno: '))
+    lista_alunos = [a1, a2, a3, a4]
+    shuffle(lista_alunos)
+    print(f"A ordem de apresentação será:\n{lista_alunos}")
 
   else:
     print("Infálido ou ainda não existe!")
