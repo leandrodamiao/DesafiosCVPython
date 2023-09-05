@@ -215,5 +215,21 @@ while True:
     shuffle(lista_alunos)
     print(f"A ordem de apresentação será:\n{lista_alunos}")
 
+  elif opcaodesafio == '22':
+    print('=' * 25)
+    print(f"{'D22 - Analisando Nomes':^25}")
+    print('=' * 25)
+    nome_completo = str(input('Informe seu nome completo')).strip()
+    print(f"Olá {nome_completo}!")
+    print(
+      f"Seu nome com todas as letras maiúsculas é: \n{nome_completo.upper()}\n"
+    )
+    print(f"Com todas as letras minúsculas é: \n{nome_completo.lower()} \n")
+    print(
+      f"{nome_completo} tem {len(''.join(nome_completo.split()))} letas sem espaços. \n"
+    )
+    nome_dividido = nome_completo.split()
+    print(f"Seu primeiro nome tem {len(nome_dividido[0])} letras.")
+
   else:
     print("Infálido ou ainda não existe!")
