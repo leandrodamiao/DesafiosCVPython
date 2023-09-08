@@ -246,8 +246,8 @@ while True:
     print('=' * 25)
     print(f"{'D24 - Checando Letras':^25}")
     print('=' * 25)
-    cidade = str(input('Em que cidade você nasceu? ')).strip().upper().split()
-    print('SANTO' in cidade[0])
+    cidade = str(input('Em que cidade você nasceu? ')).strip().split()
+    print('SANTO' in cidade[0].upper())
 
   else:
     print("Infálido ou ainda não existe!")
