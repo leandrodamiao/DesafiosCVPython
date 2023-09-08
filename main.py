@@ -231,5 +231,23 @@ while True:
     nome_dividido = nome_completo.split()
     print(f"Seu primeiro nome tem {len(nome_dividido[0])} letras.")
 
+  elif opcaodesafio == '23':
+    print('=' * 25)
+    print(f"{'D23 - Separando Dígitos Nº':^25}")
+    print('=' * 25)
+    numero = int(input('informe um número: '))
+    print(f"Analisando o número {numero} temos:")
+    print(f"Unidade: {numero//1%10}")
+    print(f"Dezena: {numero//10%10}")
+    print(f"Centena: {numero//100%10}")
+    print(f"Milhar: {numero//1000%10}")
+
+  elif opcaodesafio == '24':
+    print('=' * 25)
+    print(f"{'D24 - Checando Letras':^25}")
+    print('=' * 25)
+    cidade = str(input('Em que cidade você nasceu? ')).strip().upper().split()
+    print('SANTO' in cidade[0])
+
   else:
     print("Infálido ou ainda não existe!")

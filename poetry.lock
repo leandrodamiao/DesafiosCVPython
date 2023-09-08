@@ -494,6 +494,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "pygame"
+version = "2.5.1"
+description = "Python Game Development"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "pylev"
 version = "1.4.0"
 description = "A pure Python Levenshtein implementation that's not freaking GPL'd."
@@ -768,7 +776,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "74bb9a14f88430bbacebd2066df71d1b5ea8a3de11458eb0dc03581bdbcc004a"
+content-hash = "2c64597126b03139d58a880ce7b0a352b6602bc969a4063990ed6d5502521805"
 
 [metadata.files]
 blinker = []
@@ -814,6 +822,7 @@ poetry-core = []
 ptyprocess = []
 pycparser = []
 pyflakes = []
+pygame = []
 pylev = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
