@@ -1,5 +1,6 @@
 import math
 from random import choice, shuffle
+import pygame
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -207,6 +208,7 @@ while True:
   elif opcaodesafio == '20':
     print('=' * 25)
     print(f"{'D20 - Sorteio ordem na lista':^25}")
+    print('=' * 25)
     a1 = str(input('Primeiro aluno: '))
     a2 = str(input('Primeiro aluno: '))
     a3 = str(input('Primeiro aluno: '))
@@ -214,6 +216,15 @@ while True:
     lista_alunos = [a1, a2, a3, a4]
     shuffle(lista_alunos)
     print(f"A ordem de apresentação será:\n{lista_alunos}")
+
+  elif opcaodesafio == '21':
+    print('=' * 25)
+    print(f"{'D21 - Tocando um mp3':^25}")
+    print('=' * 25)
+    pygame.init()
+    pygame.mixer.music.load('kalimba.mp3')
+    pygame.mixer.music.play()
+    pygame.event.wait()
 
   elif opcaodesafio == '22':
     print('=' * 25)
@@ -248,6 +259,13 @@ while True:
     print('=' * 25)
     cidade = str(input('Em que cidade você nasceu? ')).strip().split()
     print('SANTO' in cidade[0].upper())
+
+  elif opcaodesafio == '25':
+    print('=' * 25)
+    print(f"{'D25 - Procurando String':^25}")
+    print('=' * 25)
+    nome = str(input('Qual é o seu nome completo? ')).strip()
+    print(f"Seu nome tem Silva? {'SILVA' in nome.upper()}")
 
   else:
     print("Infálido ou ainda não existe!")
