@@ -267,5 +267,14 @@ while True:
     nome = str(input('Qual é o seu nome completo? ')).strip()
     print(f"Seu nome tem Silva? {'SILVA' in nome.upper()}")
 
+  elif opcaodesafio == '26':
+    print('=' * 25)
+    print(f"{'D26 - Ocorrências strings':^25}")
+    print('=' * 25)
+    frase = str(input('Digite uma frase: ')).strip().upper()
+    print(f"A letra A aparece {frase.count('A')} vezes na frase.")
+    print(f"A primeira letra A apareceu na {frase.find('A')+1}ª posição")
+    print(f"A última letra A apareceu na {frase.rfind('A')+1}ª posição ")
+
   else:
     print("Infálido ou ainda não existe!")
