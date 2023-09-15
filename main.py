@@ -281,5 +281,13 @@ while True:
       print(f"A primeira letra A apareceu na {frase.find('A')+1}ª posição")
       print(f"A última letra A apareceu na {frase.rfind('A')+1}ª posição ")
 
+    case '27':
+      print('=' * 25)
+      print(f"{'D27 - 1º e último nomne':^25}")
+      print('=' * 25)
+      nome_completo = str(input('Digite seu nome completo: ')).strip()
+      print(f"Seu primeiro nome é {nome_completo[:nome_completo.find(' ')]}")
+      print(f"Seu último nome é {nome_completo[nome_completo.rfind(' ')+1:]}")
+
     case _:
       print("Infálido ou ainda não existe!")
