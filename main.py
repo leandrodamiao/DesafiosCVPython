@@ -2,6 +2,7 @@ import math
 from random import choice, shuffle, randint
 import pygame
 from time import sleep
+from datetime import date
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -311,6 +312,27 @@ while True:
         print("Multado! Você excedeu o limite permitido que é de 80Km/h")
         print(f"Você deve pagar uma multa de R${(velocidade_carro-80)*7:.2f}!")
       print("Tenha um bom dia! Dirija com segurança!")
+
+    case '30':
+      print('=' * 25)
+      print(f"{'D30 - Par ou Ímpar':^25}")
+      print('=' * 25)
+      n = int(input('Me diga um número qualquer: '))
+      print(f"O número {n} é PAR" if n % 2 == 0 else f"O número {n} é ÍMPAR")
+
+    case '31':
+      print('=' * 25)
+      print(f"{'D31 - Custo da Viagem':^25}")
+      print('=' * 25)
+      distancia_viagem = float(input("Qual é a distância da sua viagem? "))
+      print(
+        f"Você está prestes a começar uma viagem de {distancia_viagem:.1f}Km.")
+      #     if distancia_viagem <= 200:
+      #       custo_viagem = distancia_viagem * 0.50
+      #     else:
+      #       custo_viagem = distancia_viagem * 0.45
+      custo_viagem = distancia_viagem * 0.50 if distancia_viagem <= 200 else distancia_viagem * 0.45
+      print(f"O preço da sua passagem será de R${custo_viagem:.2f}")
 
     case _:
       print("Infálido ou ainda não existe!")
