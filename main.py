@@ -1,6 +1,7 @@
 import math
-from random import choice, shuffle
+from random import choice, shuffle, randint
 import pygame
+from time import sleep
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("=" * 25)
@@ -288,6 +289,18 @@ while True:
       nome_completo = str(input('Digite seu nome completo: ')).strip()
       print(f"Seu primeiro nome é {nome_completo[:nome_completo.find(' ')]}")
       print(f"Seu último nome é {nome_completo[nome_completo.rfind(' ')+1:]}")
+
+    case '28':
+      print('=' * 25)
+      print(f"{'D28 - Jogo Advinhação':^25}")
+      print('=' * 25)
+      print('\nPensei em um número entre 0 e 5. Tente adivinhar...\n')
+      maquina = randint(0, 5)
+      jogador = int(input('Em que númeo pensei? '))
+      print('PROCESSANDO...')
+      sleep(3)
+      print("Parabéns! Você conseguiu me vencer!" if maquina == jogador else
+            f"Ganhei! Eu pensei no número {maquina} e não no {jogador}!")
 
     case _:
       print("Infálido ou ainda não existe!")
