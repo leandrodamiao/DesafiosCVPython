@@ -13,7 +13,7 @@ while True:
   opcaodesafio = input(
     print(
       '\nQUal desafio deseja ver agora? \nTecle s ou sair para finalizar o programa. \n'
-    ))
+    )).strip()
 
   match opcaodesafio:
 
@@ -301,6 +301,16 @@ while True:
       sleep(3)
       print("Parabéns! Você conseguiu me vencer!" if maquina == jogador else
             f"Ganhei! Eu pensei no número {maquina} e não no {jogador}!")
+
+    case '29':
+      print('=' * 25)
+      print(f"{'D29 - Radar Eletrônico':^25}")
+      print('=' * 25)
+      velocidade_carro = int(input('Qaul é a velocidade atual do carro? '))
+      if velocidade_carro >= 80:
+        print("Multado! Você excedeu o limite permitido que é de 80Km/h")
+        print(f"Você deve pagar uma multa de R${(velocidade_carro-80)*7:.2f}!")
+      print("Tenha um bom dia! Dirija com segurança!")
 
     case _:
       print("Infálido ou ainda não existe!")
