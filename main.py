@@ -334,5 +334,18 @@ while True:
       custo_viagem = distancia_viagem * 0.50 if distancia_viagem <= 200 else distancia_viagem * 0.45
       print(f"O preço da sua passagem será de R${custo_viagem:.2f}")
 
+    case '32':
+      print('=' * 25)
+      print(f"{'D32 - Ano Bissexto':^25}")
+      print('=' * 25)
+      ano = int(
+        input("Qual ano quer analizar? Coloque 0 para analizar o ano atual: "))
+      if ano == 0:
+        ano = date.today().year
+      if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+        print(f"O ano {ano} é BISSEXTO")
+      else:
+        print(f"O ano {ano} NÂO é BISSEXTO")
+
     case _:
       print("Infálido ou ainda não existe!")
