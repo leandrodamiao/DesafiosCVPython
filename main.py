@@ -347,5 +347,34 @@ while True:
       else:
         print(f"O ano {ano} NÂO é BISSEXTO")
 
+    case '33':
+      print('=' * 25)
+      print(f"{'D33 - Maior Menor Valores':^25}")
+      print('=' * 25)
+      valor_a = int(input("Primeiro valor: "))
+      valor_b = int(input("Segundao valor: "))
+      valor_c = int(input("Terceiro valor: "))
+      #Comparando dos três qual é o maior valor
+      maior_valor = valor_a
+      if valor_b > valor_a and valor_c:
+        maior_valor = valor_b
+      if valor_c > valor_a and valor_b:
+        maior_valor = valor_c
+
+        #Comparando dos três quel é o menor valor
+      menor_valor = valor_a
+      if valor_b < valor_a and valor_c:
+        menor_valor = valor_b
+      if valor_c < valor_a and valor_b:
+        menor_valor = valor_c
+
+      print(f"O menor valor digitado foi{menor_valor}")
+      print(f"O maior valor digitado foi {maior_valor}")
+
+    case '34':
+      print('=' * 25)
+      print(f"{'D34 - Aumentos Múltiplos':^25}")
+      salario = float(input("Qual é o salário do funcionário? R$"))
+
     case _:
       print("Infálido ou ainda não existe!")
