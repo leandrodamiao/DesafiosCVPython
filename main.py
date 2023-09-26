@@ -5,6 +5,7 @@ from time import sleep
 from datetime import date
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
+print("")
 print("=" * 25)
 print(f"{'Desafios Pyhton':^25}")
 print("=" * 25)
@@ -374,7 +375,27 @@ while True:
     case '34':
       print('=' * 25)
       print(f"{'D34 - Aumentos Múltiplos':^25}")
+      print('=' * 25)
       salario = float(input("Qual é o salário do funcionário? R$"))
+      if salario <= 1250:
+        salario_aumento = salario + (salario * 15 / 100)
+      else:
+        salario_aumento = salario + (salario * 10 / 100)
+      print(
+        f"Quem ganhava R${salario:.2f} passa a ganhar R${salario_aumento:.2f} agora."
+      )
+
+    case '35':
+      print('=' * 25)
+      print(f"{'D35 - Analisador de Triânculos':^25}")
+      print('=' * 25)
+      seg1 = float(input("Primeiro Segmento: "))
+      seg2 = float(input("Segundo Segmento: "))
+      seg3 = float(input("Terceiro Segmento: "))
+      if seg1 + seg2 > seg3 and seg1 + seg3 > seg2 and seg2 + seg3 > seg1:
+        print("Os segmentos acima PODEM FORMAR triângulos!")
+      else:
+        print("Os segmentos acima NÂO PODEM FORMAR triângulos!")
 
     case _:
       print("Infálido ou ainda não existe!")
