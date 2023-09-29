@@ -397,5 +397,21 @@ while True:
       else:
         print("Os segmentos acima NÂO PODEM FORMAR triângulos!")
 
+    case '36':
+      print('=' * 25)
+      print(f"{'D36 - Aprovando Empréstimo':^25}")
+      print('=' * 25)
+      valor_casa = float(input("Qual o valor da casa? R$"))
+      salario_comprador = float(input("Qual o salário do comprador? R$"))
+      tempo_financ = int(input("Quantos anos de financiamento? "))
+      prestacao_casa = valor_casa / (tempo_financ * 12)
+      print(
+        f"Para pagar uma casa de R${valor_casa:.2f} em {tempo_financ} anos a prestação será de R${prestacao_casa:.2f}"
+      )
+      if prestacao_casa > salario_comprador * 30 / 100:
+        print("Empréstimo NEGADO!")
+      else:
+        print("Parabéns! Empréstimo CONCEDIDO!")
+
     case _:
       print("Infálido ou ainda não existe!")
