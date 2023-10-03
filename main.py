@@ -413,5 +413,37 @@ while True:
       else:
         print("Parabéns! Empréstimo CONCEDIDO!")
 
+    case '37':
+      print('=' * 25)
+      print(f"{'D37 - Bases Numéricas':^25}")
+      print('=' * 25)
+      num = int(input("Digite um número inteiro"))
+      print("Escolha uma das bases para conversão")
+      print("[ 1 ] converter para BINÁRIO")
+      print("[ 2 ] converter para OCTAL")
+      print("[ 3 ] converter para HEXADECIMAL")
+      sua_opcao = int(input("Sua Opção: "))
+      if sua_opcao == 1:
+        print(f"{num} convertio para BINáARIO é ifual a {bin(num)[2:]}")
+      elif sua_opcao == 2:
+        print(f"{num} convertido para OCTAL é igual a {oct(num)[2:]}")
+      elif sua_opcao == 3:
+        print(f"{num} convertido para HEXADECIMAL é igual a {hex(num)[2:]}")
+      else:
+        print("Opção inválida! Tente novamente!")
+
+    case '38':
+      print('=' * 25)
+      print(f"{'D38 - Comparando Numeros':^25}")
+      print('=' * 25)
+      primeiro_num = int(input("Primeiro número: "))
+      segundo_num = int(input("Segundo Número: "))
+      if primeiro_num > segundo_num:
+        print("O PRIMEIRO valor é maior!")
+      elif segundo_num > primeiro_num:
+        print("O SEGUNDO valor é maior!")
+      else:
+        print("Os dois valores são iguais")
+
     case _:
       print("Infálido ou ainda não existe!")
