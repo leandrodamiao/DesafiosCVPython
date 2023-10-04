@@ -445,5 +445,24 @@ while True:
       else:
         print("Os dois valores são iguais")
 
+    case '39':
+      print('=' * 25)
+      print(f"{'D39 - Alistamento Militar':^25}")
+      print('=' * 25)
+      ano_nascimento = int(input("Ano de Nascimento: "))
+      idade = date.today().year - ano_nascimento
+      print(
+        f"Quem nasceu em {ano_nascimento} tem {idade} em {date.today().year}.")
+      if idade < 18:
+        print(f"Ainda faltam {18-idade} anos para o alistamento")
+        print(f"Seu alistamento será em {ano_nascimento + 18}.")
+      elif idade == 18:
+        print("Você deve se alistar IMEDIATAMENTE!")
+      else:
+        print(
+          f"Você já deveria ter se alistaro há {date.today().year - (ano_nascimento + 18)} anos"
+        )
+        print(f"Seu alistamento foi em {ano_nascimento + 18}.")
+
     case _:
       print("Infálido ou ainda não existe!")
