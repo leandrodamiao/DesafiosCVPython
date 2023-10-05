@@ -464,5 +464,43 @@ while True:
         )
         print(f"Seu alistamento foi em {ano_nascimento + 18}.")
 
+    case '40':
+      print('=' * 25)
+      print(f"{'D40 - Clássico da Média':^25}")
+      print('=' * 25)
+      nota1 = float(input("Primeira nota: "))
+      nota2 = float(input("Segunda nota: "))
+      media = (nota1 + nota2) / 2
+      print(
+        f"Tirando {nota1:.1f} e {nota2:.1f} a média do aluno é {media:.1f}")
+      if media < 5:
+        print("O aluno está REPROVADO!")
+      elif media < 7:
+        print("O alono está de RECUPERAÇÂO!")
+      else:
+        print("O aluno está APROVADO!")
+
+    case '41':
+      print('=' * 25)
+      print(f"{'D41 - Confederação Natação':^25}")
+      print('=' * 25)
+      nascimento = int(input("Qual seu ano de nascimento? "))
+      #Calculando a idade com base no ano de nascimento:
+      idade = date.today().year - nascimento
+      #Classificação do atleta de acordo com sua idade:
+      if idade <= 9:
+        classificacao = "MIRIM"
+      elif idade > 9 and idade <= 14:
+        classificacao = "INFANTIL"
+      elif idade > 14 and idade <= 19:
+        classificacao = "JUNIOR"
+      elif idade > 19 and idade <= 25:
+        classificacao = "SÊNIOR"
+      elif idade > 25:
+        classificacao = "MASTER"
+
+      print(f"O atleta tem {idade} anos.")
+      print(f"Classificação: {classificacao}")
+
     case _:
       print("Infálido ou ainda não existe!")
