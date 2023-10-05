@@ -482,7 +482,7 @@ while True:
 
     case '41':
       print('=' * 25)
-      print(f"{'D41 - Confederação Natação':^25}")
+      print(f"{'D41 - Confed Natação':^25}")
       print('=' * 25)
       nascimento = int(input("Qual seu ano de nascimento? "))
       #Calculando a idade com base no ano de nascimento:
@@ -501,6 +501,23 @@ while True:
 
       print(f"O atleta tem {idade} anos.")
       print(f"Classificação: {classificacao}")
+
+    case '42':
+      print('=' * 25)
+      print(f"{'D42 - Triângulos Plus':^25}")
+      print('=' * 25)
+      segmento1 = int(input("Primeiro Segmento: "))
+      segmento2 = int(input("Segundo Segmento: "))
+      segmento3 = int(input("Terceiro Segmento: "))
+      if segmento1 + segmento2 < segmento3 or segmento1 + segmento3 < segmento2 or segmento2 + segmento3 < segmento1:
+        print("Os segmentos acima NÂO PODEM FORMAR triângulo")
+      else:
+        if segmento1 == segmento2 == segmento3:
+          print("Os segmentos acima FORMAM um triângulo EQUILÁTERO")
+        elif segmento1 == segmento2 or segmento1 == segmento3 or segmento2 == segmento3:
+          print("Os segmentos acima FORMAM um triângulo ISÓSCELES")
+        else:
+          print("Os segmentos acima FORMAM um triângulo ESCALENO")
 
     case _:
       print("Infálido ou ainda não existe!")
