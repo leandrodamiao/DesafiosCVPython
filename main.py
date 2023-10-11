@@ -519,5 +519,61 @@ while True:
         else:
           print("Os segmentos acima FORMAM um triângulo ESCALENO")
 
+    case '43':
+      print('=' * 25)
+      print(f"{'D43 - Massa Corporea':^25}")
+      print('=' * 25)
+      peso = float(input("Qual é o seu peso? (Kg) "))
+      altura = float(input("Qaul é sua altura? (m) "))
+      #Calculando IMC usando o peso e altula lidos:
+      imc = peso / altura**2
+      print(f"O IMC dessa pessoa é de {imc:.1f}")
+      #Gerando Status de acordo com o IMC calculado:
+      if imc <= 18.5:
+        print("Você está abaixo do peso")
+      elif imc <= 25:
+        print("Parabéns!!! Você está no peso ideal!")
+      elif imc <= 30:
+        print("Cuidado! Você está sobrepeso")
+      elif imc <= 40:
+        print("Você está em obesidade.")
+      else:
+        print("Atenção! Você está em obesidade mórbida.")
+
+    case '44':
+      print('=' * 25)
+      print(f"{'D44 - Pagamentos':^25}")
+      print('=' * 25)
+      preco = float(input("Preço das compras: R$"))
+      print("FORMAS DE PAGAMENTO")
+      print('''[ 1 ] à vista dinheiro/cheque
+[ 2 ] à vista cartão
+[ 3 ] 2x no cartão
+[ 4 ] 3x ou mais no cartão
+      ''')
+      opcao = int(input("Qual é a opão? "))
+      if opcao == 0 or opcao > 4:
+        print("Opcção inválida")
+      elif opcao == 1:
+        print(
+          f"Sua compra de R${preco:.2f} vai custar {preco - (preco*10/100):.2f} no final"
+        )
+      elif opcao == 2:
+        print(
+          f"Sua compra de R${preco:.2f} vai custar {preco - (preco*5/100):.2f}"
+        )
+      elif opcao == 3:
+        print(
+          f"Sua será paga em 2 parcelas de R${preco/2:.2f} sem juros, total {preco:.2f}"
+        )
+      elif opcao == 4:
+        parcelas = int(input("Quantas parcelas? "))
+        print(
+          f"Sua compra será parcelada em {parcelas}x de R${(preco + (preco * 20 / 100)) / parcelas:.2f} COM JUROS"
+        )
+        print(
+          f"Sua compra de R${preco:.2f} vai custar R${preco + (preco * 20 / 100):.2f} no final."
+        )
+
     case _:
       print("Infálido ou ainda não existe!")
