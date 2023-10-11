@@ -575,5 +575,37 @@ while True:
           f"Sua compra de R${preco:.2f} vai custar R${preco + (preco * 20 / 100):.2f} no final."
         )
 
+    case '45':
+      print('=' * 25)
+      print(f"{'D45 - KPKENPO':^25}")
+      print('=' * 25)
+      print("""Suas Opões:
+[ 0 ] Pedra
+[ 1 ] Papel
+[ 2 ] Tesoura
+""")
+      escolha = ['pedra', 'papel', 'tesoura', 'uma opção inválida']
+      jogador = int(input("Qual é a sua jogada? "))
+      if jogador > 2:
+        jogador = 3
+      comp = randint(0, 2)
+      print("Jo")
+      sleep(1)
+      print("KEN")
+      sleep(1)
+      print("PO!!!")
+      print('')
+      print(f"O computador escolheu {escolha[comp]}")
+      print(f"O jogador escolheu {escolha[jogador]}")
+      print('')
+      if jogador > 2:
+        print("Jogada inválida! Você pode tentar novamente.")
+      elif jogador == comp:
+        print("Empate")
+      elif jogador == 0 and comp == 1 or jogador == 1 and comp == 2 or jogador == 2 and comp == 0:
+        print("Computador venceu!!!")
+      elif comp == 0 and jogador == 1 or comp == 1 and jogador == 2 or comp == 2 and jogador == 0:
+        print("Parabéns!!! Você venceu!!!")
+
     case _:
       print("Infálido ou ainda não existe!")

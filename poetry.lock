@@ -152,6 +152,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "emoji"
+version = "2.8.0"
+description = "Emoji for Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[package.extras]
+dev = ["pytest", "coverage", "coveralls"]
+
+[[package]]
 name = "filelock"
 version = "3.12.2"
 description = "A platform independent file lock."
@@ -776,7 +787,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "2c64597126b03139d58a880ce7b0a352b6602bc969a4063990ed6d5502521805"
+content-hash = "9e753bf01b7f5d36322d52cfec6f68ddba8740fe36272ae0929b2655f74a3d3c"
 
 [metadata.files]
 blinker = []
@@ -793,6 +804,7 @@ crashtest = []
 cryptography = []
 debugpy = []
 distlib = []
+emoji = []
 filelock = []
 flask = []
 html5lib = []
