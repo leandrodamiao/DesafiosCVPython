@@ -3,6 +3,7 @@ from random import choice, shuffle, randint
 import pygame
 from time import sleep
 from datetime import date
+import emoji
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -579,12 +580,14 @@ while True:
       print('=' * 25)
       print(f"{'D45 - KPKENPO':^25}")
       print('=' * 25)
-      print("""Suas Opões:
-[ 0 ] Pedra
-[ 1 ] Papel
-[ 2 ] Tesoura
-""")
-      escolha = ['pedra', 'papel', 'tesoura', 'uma opção inválida']
+      print(emoji.emojize("""Suas Opões:
+[ 0 ] Pedra :raised_fist:
+[ 1 ] Papel :raised_hand:
+[ 2 ] Tesoura :victory_hand:
+"""))
+      escolha = [
+        ':raised_fist:', ':raised_hand:', ':victory_hand:', ':prohibited:'
+      ]
       jogador = int(input("Qual é a sua jogada? "))
       if jogador > 2:
         jogador = 3
@@ -595,8 +598,8 @@ while True:
       sleep(1)
       print("PO!!!")
       print('')
-      print(f"O computador escolheu {escolha[comp]}")
-      print(f"O jogador escolheu {escolha[jogador]}")
+      print(emoji.emojize(f'A máquina escolheu {escolha[comp]}'))
+      print(emoji.emojize(f'O jogador escolheu {escolha[jogador]}'))
       print('')
       if jogador > 2:
         print("Jogada inválida! Você pode tentar novamente.")
