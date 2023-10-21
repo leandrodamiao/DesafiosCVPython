@@ -578,7 +578,7 @@ while True:
 
     case '45':
       print('=' * 25)
-      print(f"{'D45 - KPKENPO':^25}")
+      print(f"{'D45 - JOKENPO':^25}")
       print('=' * 25)
       print(emoji.emojize("""Suas Opões:
 [ 0 ] Pedra :raised_fist:
