@@ -610,5 +610,35 @@ while True:
       elif comp == 0 and jogador == 1 or comp == 1 and jogador == 2 or comp == 2 and jogador == 0:
         print("Parabéns!!! Você venceu!!!")
 
+    case '46':
+      print('=' * 25)
+      print(f"{'D46 - Contagem Regressiva':^25}")
+      print('=' * 25)
+      for c in range (10, -1, -1):
+        print(c)
+        sleep(1)
+      print(emoji.emojize('Feliz ano novo!!! :raised_hand: :partying_face:'))
+      print(emoji.emojize(':woman_dancing: :clinking_beer_mugs: :man_dancing: :clinking_glasses:'))
+      print(emoji.emojize(':fireworks: :fireworks: :fireworks: :fireworks:'))
+
+    case '47':
+      print('=' * 25)
+      print(f"{'D47 - Contagem de Pares':^25}")
+      print('=' * 25)
+      for c in range (2, 51, 2):
+         print(c, end=' ')
+      print("Acabou!")
+
+    case '48':
+      print('=' * 25)
+      print(f"{'D47 - Soma Impares /3':^25}")
+      print('=' * 25)
+      #Faça um programa que calcule asoma entre todos os números impares que são múltiplos de três dentro do intervalo de 1 a 500
+      n=0
+      for c in range (1, 500, 2):
+        if c % 3 == 0:
+          n += c
+      print(f"A soma dos valores ímpares e múltiplos de 3 no intervalo de 1 a 500 é {n}")
+
     case _:
       print("Infálido ou ainda não existe!")
