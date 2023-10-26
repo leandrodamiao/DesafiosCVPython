@@ -640,5 +640,48 @@ while True:
           n += c
       print(f"A soma dos valores ímpares e múltiplos de 3 no intervalo de 1 a 500 é {n}")
 
+    case '49':
+      print('=' * 25)
+      print(f"{'D49 - Tabuada 2.0':^25}")
+      print('=' * 25)
+      n=int(input('Digite um número para ver sua tabuada: '))
+      for _ in range (1, 11):
+        print(f"{n:2}  x {_:2} = {n*_:2}")
+
+    case '50':
+      print('=' * 25)
+      print(f"{'D50 - Soma dos Pares':^25}")
+      print('=' * 25)
+      #Desenvolva um programa que leira 6 números inteiros e mostre a soma apenas daqueles que forem pares:
+      soma=0
+      cont=0
+      for _ in range (1, 7):
+        n=int(input(f"Digite o {_}º numero: "))
+        if n % 2 == 0:
+          soma += n
+          cont += 1
+      print(f"Você informou {cont} valores pares e a soma é igual a {soma}")
+
+    case '51':
+      print('=' * 25)
+      print(f"{'D51 - 10 Termos de uma PA':^25}")
+      print('=' * 25)
+      termo1=int(input("Primeiro termo: "))
+      razao=int(input("Razão: "))
+      ultimo=termo1 + 10 * razao
+      for a in range (termo1, ultimo, razao):
+        print(a, end=' ')
+
+    case '52':
+      print('=' * 25)
+      print(f"{'D52 - Números Primos':^25}")
+      print('=' * 25)
+      n=int(input('Digite um número: '))
+      for _ in range(1, n+1):
+        if n % _ == 0:
+          print(f"\033[33m{_}\033[m", end=' ')
+        else:
+          print(f"\033[31m{_}\033[m", end=' ')
+  
     case _:
       print("Infálido ou ainda não existe!")
