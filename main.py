@@ -677,11 +677,27 @@ while True:
       print(f"{'D52 - Números Primos':^25}")
       print('=' * 25)
       n=int(input('Digite um número: '))
-      for _ in range(1, n+1):
+      cont=0
+      for _ in range(1, n + 1):
         if n % _ == 0:
           print(f"\033[33m{_}\033[m", end=' ')
+          cont += 1
         else:
           print(f"\033[31m{_}\033[m", end=' ')
+      print(f"\nO número {n} foi divisível {cont} vezes")
+      print("E por isso ele É PRIMO!" if cont == 2 else "E por isso ele NÃO É PRIMO!")
+
+    case '53':
+      print('=' * 25)
+      print(f"{'D53 - Detec Palíndromos':^25}")
+      print('=' * 25)
+      #Crie um programa que inverta uma frase ou palavra e diga se é ou não palíndromo:
+      frase=str(input("Digite uma frase: ")).strip().upper().split()
+      frase = ''.join(frase)
+      print(f"\nO inverso de \033[32m{frase}\033[m é \033[33m{frase[::-1]}\033[m")
+      print("A frase digitada é um palíndromo!" if frase == frase[::-1] else "A frase digitada não é um palíndromo!")
+      
+      
   
     case _:
       print("Infálido ou ainda não existe!")
