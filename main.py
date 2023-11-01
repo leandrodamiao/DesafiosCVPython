@@ -696,8 +696,66 @@ while True:
       frase = ''.join(frase)
       print(f"\nO inverso de \033[32m{frase}\033[m é \033[33m{frase[::-1]}\033[m")
       print("A frase digitada é um palíndromo!" if frase == frase[::-1] else "A frase digitada não é um palíndromo!")
+
+    case '54':
+      print('=' * 25)
+      print(f"{'D54 - Grupo Maioridade':^25}")
+      print('=' * 25)
+      ano_nasc = 0
+      maior_idade = 0
+      menor_idade = 0
       
-      
+      for pessoa in range(1, 8):
+        ano_nasc = int(input(f"Em que ano a {pessoa}ª pessoa nasceu? "))
+        if date.today().year - ano_nasc < 21:
+          menor_idade += 1
+        else:
+          maior_idade += 1
+      print(f"Ao todo tivemos {maior_idade} pessoa(s) maior(es) de idade")
+      print(f"E também tivemos {menor_idade} pessoa(s) menor(es) de idade")
+
+    case '55':
+      print('=' * 25)
+      print(f"{'D55 - Maior/menor Peso':^25}")
+      print('=' * 25)
+      Maior_peso = 0
+      menor_peso = 0
+      for pessoa in range(1, 6):
+        peso = float(input(f"Peso da {pessoa}ª pessoa: "))
+        if pessoa == 1:
+          maior_peso = peso
+          menor_peso = peso
+        else:
+          if peso > maior_peso:
+            maior_peso = peso
+          if peso < menor_peso:
+            menor_peso = peso
+      print(f"O maior peso lido foi de  {maior_peso}Kg")
+      print(f"O menor peso lido foi de {menor_peso}Kg")
+
+    case '56':
+      print('=' * 25)
+      print(f"{'D56 - Analizador Completo':^25}")
+      print('=' * 25)
+      soma_idade = 0
+      homem_velho = ''
+      maior_idade = 0
+      mulheres = 0
+      for pessoa in range (1, 5):
+        print(f"\n--- {pessoa}ª PESSOA ---")
+        nome=str(input("Nome: ")).strip()
+        idade=int(input("Idade: "))
+        sexo=str(input("Sexo [M/F]: ")).strip().upper()
+        soma_idade += idade
+        if sexo == 'M' and idade > maior_idade:
+          homem_velho = nome
+          maior_idade = idade
+        if sexo == 'F' and idade < 20:
+          mulheres += 1
+      print(f"A média de idade do grupo é de {soma_idade/4:.1f}.")
+      print(f"O homem mais velhor tem {maior_idade} e se chama {homem_velho}.")
+      print(f"Ao todo são {mulheres} mulheres com menos de 20 anos.")
+      #Revisar
   
     case _:
       print("Infálido ou ainda não existe!")
