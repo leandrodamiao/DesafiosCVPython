@@ -617,8 +617,7 @@ while True:
       for c in range (10, -1, -1):
         print(c)
         sleep(1)
-      print(emoji.emojize('Feliz ano novo!!! :raised_hand: :partying_face:'))
-      print(emoji.emojize(':woman_dancing: :clinking_beer_mugs: :man_dancing: :clinking_glasses:'))
+      print('Feliz ano novo!!!')
       print(emoji.emojize(':fireworks: :fireworks: :fireworks: :fireworks:'))
 
     case '47':
@@ -770,63 +769,100 @@ while True:
       print('=' * 25)
       print(f"{'D58 - Adivinhação 2.0':^25}")
       print('=' * 25)
-      print("Em construção")
-      '''Melhore o jogo do desafio 28 onde o computador pensa em um número de 0 a 10. Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer'''
+      #Melhore o jogo do desafio 28 onde o computador pensa em um número de 0 a 10. Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final quantos palpites foram necessários para vencer
+      print("Sou seu computador...")
+      pc = randint(0, 10)
+      print(f"Acabei de pensar em um número entre 0 e 10.")
+      print("Será que você consegue adivinhar qual foi?")
+      gamer = int(input("Qual é o seu palpite? "))
+      tentativas = 1
+      while gamer != pc:
+        if gamer > 10:
+          print("Escolha um número entre 0 e 10.")
+        else:
+          print("Mais... " if gamer < pc else "Menos... ", end='')
+        print("tente novamente.")
+        gamer = int(input("Qual é o seu palpite? "))
+        tentativas += 1
+      print(f"\n\033[32mAcertou em {tentativas} tentativas. Parabéns\033[m")
+    
 
     case '59':
       print('=' * 25)
       print(f"{'D59 - Menu de Opções':^25}")
       print('=' * 25)
-      print("Em construção")
-      '''Crie um programa que leia dois valores e mostre um menu na tela
+      '''Leia dois valores e mostre um menu na tela
       [1]Somar
       [2]Multiplicar
       [3]Maior
       [4]Novos Números
       [5]Sair do Programa
       Seu programa devera realizar a operação solicitada em cada caso'''
-
+      opcao = 4
+      while opcao != 5:
+        if opcao == 1:
+          print(f"A soma entre {n1} e {n2} é igual a {n1 + n2}")
+        elif opcao == 2:
+          print(f"O resultado de {n1} x {n2} é {n1 * n2}")
+        elif opcao == 3:
+          print(f"Entre {n1} e {n2} o maior é {max(n1, n2)}")
+        elif opcao == 4:
+          n1 = int(input("Primeiro valor: "))
+          n2 = int(input("Segundo valor: "))
+        elif opcao > 5:
+          print("Opcão inválida!")  
+        print("""        [1]Somar
+        [2]Multiplicar
+        [3]Maior
+        [4]Novos Números
+        [5]Sair do Programa""")
+        print('=' * 25)
+        opcao = int(input("Qual é a sua opcao? \n"))
+      print("Finalizando...")
+      sleep(2)
+      print("Fim do Programa!! Volte sempre!")
+            
     case '60':
       print('=' * 25)
       print(f"{'D60 - Fatorial':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Faça um programa que leia um númeo qualquer e mostre seu fatorial.'''
+      #Faça um programa que leia um númeo qualquer e mostre seu fatorial.
 
     case '61':
       print('=' * 25)
       print(f"{'D61 - P.A. V2.0':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Refaça o desavio 51, lendo o primeiro termo e a razão de uma PA, mostrando so 10 primeiros termos da progreção usando a estrutura While'''
+      #Refaça o desavio 51, lendo o primeiro termo e a razão de uma PA, mostrando so 10 primeiros termos da progreção usando a estrutura While
 
     case '62':
       print('=' * 25)
       print(f"{'D62 - Super P.A. V3.0':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Melhore o DESAFIO 61, perguntando para o usuário se ele quer mostrar mais alguns termos. O programa encerra quando ele disser que quer mostrar 0 termos.'''
+      #Melhore o DESAFIO 61, perguntando para o usuário se ele quer mostrar mais alguns termos. O programa encerra quando ele disser que quer mostrar 0 termos.
 
     case '63':
       print('=' * 25)
       print(f"{'D63 - Sequência de Fibonacci':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Escreva um programa que lia um número N inteiro qualquer e mostre na tela os n primeiros elementos de uma sequência de Fibonacci.'''
+      """Escreva um programa que lia um número N inteiro qualquer e mostre na tela os n primeiros elementos de uma sequência de Fibonacci."""
 
     case '64':
       print('=' * 25)
       print(f"{'D64 - Vários valores V1.0':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Crie um programa que leia vários números inteiros pelo teclado. Oprograma só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag)'''
+      """Crie um programa que leia vários números inteiros pelo teclado. Oprograma só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag)"""
 
     case '65':
       print('=' * 25)
       print(f"{'D65 - Vários valores V1.0':^25}")
       print('=' * 25)
       print("Em construção")
-      '''Crie um programa que leia vários números inteiros pelo teclado. No final da execução, mostre a média entre todos os valores e qual foi o maior e o meor valores lidos. O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores.'''
+      """Crie um programa que leia vários números inteiros pelo teclado. No final da execução, mostre a média entre todos os valores e qual foi o maior e o meor valores lidos. O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores."""
   
     case _:
       print("Infálido ou ainda não existe!")
