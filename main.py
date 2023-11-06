@@ -825,9 +825,15 @@ while True:
     case '60':
       print('=' * 25)
       print(f"{'D60 - Fatorial':^25}")
-      print('=' * 25)
-      print("Em construção")
+      print('=' * 25)      
       #Faça um programa que leia um númeo qualquer e mostre seu fatorial.
+      n = c =int(input("Digite um número para calcular seu fatorial: "))
+      print(f"Calculando {n}! = {n}", end='')
+      while c > 1:
+        c -= 1
+        print(f" x {c}", end='')
+        n *= c
+      print('=',n)
 
     case '61':
       print('=' * 25)
