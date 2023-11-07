@@ -839,8 +839,15 @@ while True:
       print('=' * 25)
       print(f"{'D61 - P.A. V2.0':^25}")
       print('=' * 25)
-      print("Em construção")
       #Refaça o desavio 51, lendo o primeiro termo e a razão de uma PA, mostrando so 10 primeiros termos da progreção usando a estrutura While
+      termo = int(input("Primeiro termo: "))
+      razao = int(input("Razão da PA: "))
+      ultimo = termo + razao * 10
+      a = termo
+      while a != ultimo:
+        print(a, end=' ')
+        a += razao
+      print("Fim")
 
     case '62':
       print('=' * 25)
