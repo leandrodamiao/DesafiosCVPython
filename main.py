@@ -845,7 +845,7 @@ while True:
       ultimo = termo + razao * 10
       a = termo
       while a != ultimo:
-        print(a, end=' ')
+        print(a, end=' -> ')
         a += razao
       print("Fim")
 
@@ -853,22 +853,53 @@ while True:
       print('=' * 25)
       print(f"{'D62 - Super P.A. V3.0':^25}")
       print('=' * 25)
-      print("Em construção")
       #Melhore o DESAFIO 61, perguntando para o usuário se ele quer mostrar mais alguns termos. O programa encerra quando ele disser que quer mostrar 0 termos.
+      primeiro = termo = int(input("Primeiro temo: "))
+      razao = int(input("Razão da PA: "))
+      opcao = 10
+      cont = 0
+      while opcao != 0:
+        opcao += cont
+        while cont < opcao:
+          print(termo, end=' -> ')
+          termo += razao
+          cont += 1
+        print("PAUSA")
+        opcao = int(input("Quantos termos você quer mostrar a mais? "))
+      print(f"Progressão finalizada com {cont} termos mostrados.")
+
+
 
     case '63':
       print('=' * 25)
-      print(f"{'D63 - Sequência de Fibonacci':^25}")
+      print(f"{'D63 - Seq. de Fibonacci':^25}")
       print('=' * 25)
-      print("Em construção")
-      """Escreva um programa que lia um número N inteiro qualquer e mostre na tela os n primeiros elementos de uma sequência de Fibonacci."""
+      """Escreva um programa que leia um número N inteiro qualquer e mostre na tela os n primeiros elementos de uma sequência de Fibonacci."""
+      termo = int(input("Quantos termos você quer mostrar? "))
+      a = 0
+      b = 1
+      cont = 2
+      print(f"{a} -> {b} -> ", end='')
+      while cont < termo:
+        c = a + b
+        print(c, end=' -> ')
+        a = b
+        b = c
+        cont += 1
+      print('FIM')
 
     case '64':
       print('=' * 25)
       print(f"{'D64 - Vários valores V1.0':^25}")
       print('=' * 25)
-      print("Em construção")
-      """Crie um programa que leia vários números inteiros pelo teclado. Oprograma só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag)"""
+      """Crie um programa que leia vários números inteiros pelo teclado. O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, mostre quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag)"""
+      n = total = cont = 0
+      while n != 999:
+        n = int(input("Digite um númeo [999 para parar]: "))
+        if n != 999:
+          total += n
+          cont += 1
+      print(f"Você digitou {cont} números e a  soma entre eles foi {total}")
 
     case '65':
       print('=' * 25)
