@@ -905,8 +905,56 @@ while True:
       print('=' * 25)
       print(f"{'D65 - Vários valores V1.0':^25}")
       print('=' * 25)
-      print("Em construção")
       """Crie um programa que leia vários números inteiros pelo teclado. No final da execução, mostre a média entre todos os valores e qual foi o maior e o meor valores lidos. O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores."""
+      opcao = "S"      
+      maior = menor = soma = cont = 0
+      while opcao != "N":
+        if opcao == "S":
+          n = int(input("Digite um número: "))        
+          cont += 1
+          soma += n
+          if cont == 1:
+            maior = menor = n
+          else:
+            if n > maior:
+              maior = n
+            if n < menor:
+              menor = n
+        else:
+          print("Opcao inválida. Apenas Sim ou Não")
+        opcao = str(input("Quer continuar? [S/N]")).strip().upper()[0]
+      media = soma / cont
+      print(f"Você digitou {cont} números e a média foi {media:.2f}")
+      print(f"O maior valor foi {maior} e o menor foi {menor}")
+
+    case '66':
+      print('=' * 25)
+      print(f"{'D66 - Números com flag':^25}")
+      print('=' * 25)
+      cont = soma = 0
+      while True:
+        n = int(input("Digite um valor (999 para parar): "))
+        if n == 999:
+          break
+        cont += 1
+        soma += n
+      print(f"A soma dos {cont} valores foi {soma}!")
+
+    case '67':
+      print('=' * 25)
+      print(f"{'D67 - Tabuadas':^25}")
+      print('=' * 25)
+      while True:
+        tab = int(input("Quer ver a tabuada de qual valor? (Negativo para parar): "))
+        print('-' *25)
+        if tab > 0:
+          for _ in range (1, 11):
+            print(f"{tab:2} x {_:3} = {tab * _ :3}")
+          print('-' *25)
+        else:
+          break
+      print("Tabuada encerrada. Volte sempre!!!")
+  
   
     case _:
       print("Infálido ou ainda não existe!")
