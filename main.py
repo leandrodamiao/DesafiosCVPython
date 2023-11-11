@@ -942,7 +942,7 @@ while True:
 
     case '67':
       print('=' * 25)
-      print(f"{'D67 - Tabuadas':^25}")
+      print(f"{'D67 - Tabuadas 3.0':^25}")
       print('=' * 25)
       while True:
         tab = int(input("Quer ver a tabuada de qual valor? (Negativo para parar): "))
@@ -954,6 +954,26 @@ while True:
         else:
           break
       print("Tabuada encerrada. Volte sempre!!!")
+      
+    case '68':
+      print('=' * 25)
+      print(f"{'D68 - Par ou Impar':^25}")
+      print('=' * 25)
+      while True:
+        jogador = int(input("Digite um valor: "))
+        jogada = str(input("Par ou Ímpar? [P/I]")).strip().upper()[0]
+        maquina = randint(0, 10)
+        total = maquina + jogador
+        print('-'*25)
+        print(f"Você jogou {jogador} e o computador {maquina}. Total deu {total}")
+        print('-'*25)
+        if total % 2 == 0 and jogada == 'P':
+          print("Você VENCEU!!!")
+          print("Vamos jogar novamente...")
+        else:
+          print("Você PERDEU!!!")
+          break
+    #Incompleto
   
   
     case _:
