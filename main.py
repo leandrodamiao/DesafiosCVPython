@@ -959,21 +959,56 @@ while True:
       print('=' * 25)
       print(f"{'D68 - Par ou Impar':^25}")
       print('=' * 25)
+      vitorias = 0
       while True:
         jogador = int(input("Digite um valor: "))
-        jogada = str(input("Par ou Ímpar? [P/I]")).strip().upper()[0]
+        jogada =' '
+        while jogada not in "PI":
+          jogada = str(input("Par ou Ímpar? [P/I]")).strip().upper()[0]
         maquina = randint(0, 10)
         total = maquina + jogador
         print('-'*25)
         print(f"Você jogou {jogador} e o computador {maquina}. Total deu {total}")
         print('-'*25)
-        if total % 2 == 0 and jogada == 'P':
+        if total % 2 == 0 and jogada == 'P' or total % 2 == 1 and jogada == 'I':
           print("Você VENCEU!!!")
           print("Vamos jogar novamente...")
+          vitorias += 1
         else:
           print("Você PERDEU!!!")
           break
-    #Incompleto
+      print("-" *25)
+      print(f"GAME OVER! Você venceu {vitorias} vezes.")
+
+    case '69':
+      print('=' * 25)
+      print(f"{'D69 - Dados do Grupo':^25}")
+      print('=' * 25)
+      print(f"{'Cadastre uma pessoa':^25}")
+      print('-'*25)
+      maiores_idade = homens = mulheres_menores = 0
+      while True:
+        idade = int(input("Idade: "))
+        sexo = ' '
+        while sexo not in "MmFf":
+          sexo = str(input("Sexo [M/F]: ")).strip().upper()[0]
+        if idade > 18:
+          maiores_idade += 1
+        if sexo == 'M':
+          homens += 1
+        if sexo == 'F' and idade < 20:
+          mulheres_menores += 1
+        opcao = " "
+        while opcao not in 'SN':
+          print('-'*25)
+          opcao = str(input("Quer continuar? ")).strip().upper()
+          print('-'*25)
+        if opcao == 'N':
+          break
+      print(f"Total de pessoas com mais de 18 anos: {maiores_idade}")
+      print(f"Ao todo temos {homens} homens cadastrados")
+      print(f"E temos {mulheres_menores} com menos de 20 anos")
+        
   
   
     case _:
