@@ -1008,7 +1008,35 @@ while True:
       print(f"Total de pessoas com mais de 18 anos: {maiores_idade}")
       print(f"Ao todo temos {homens} homens cadastrados")
       print(f"E temos {mulheres_menores} com menos de 20 anos")
-        
+
+    case '70':
+      print('=' * 25)
+      print(f"{'D70 - Estatistica em Prod':^25}")
+      print('=' * 25)
+      total_compra = produto_caro = prod_barato = 0
+      print(f"{'SUPER LOJA':^25}")
+      print('-' *25)
+      while True:
+        prod = str(input("Nome do Produto: ")).strip()
+        preco = float(input("Preço: R$"))
+        if total_compra == 0:
+          prod_barato = preco
+        else:
+          if prod_barato < preco:
+            prod_barato = preco
+        total_compra += preco
+        if preco > 1000.00:
+          produto_caro += 1
+        opcao = ' '
+        while opcao not in 'SN':
+          opcao = str(input("Quer continuar? ")).strip().upper()[0]
+        if opcao == 'N':
+          break
+      print(f"{'FIM DO PROGRAMA':-^25}")
+      print(f"O total da compra foi R${total_compra:.2f}")
+      print(f"Temos {produto_caro} produtos custando mais de R$1000.00")
+      print(f"O produto mais barato foi ")
+      #Incompleto
   
   
     case _:
