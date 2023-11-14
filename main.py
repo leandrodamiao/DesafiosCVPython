@@ -1013,20 +1013,23 @@ while True:
       print('=' * 25)
       print(f"{'D70 - Estatistica em Prod':^25}")
       print('=' * 25)
-      total_compra = produto_caro = prod_barato = 0
+      total_compra = preco_caro = preco_barato = 0
+      prod_barato = ' '
       print(f"{'SUPER LOJA':^25}")
       print('-' *25)
       while True:
         prod = str(input("Nome do Produto: ")).strip()
         preco = float(input("Preço: R$"))
         if total_compra == 0:
-          prod_barato = preco
+          preco_barato = preco
+          prod_barato = prod
         else:
-          if prod_barato < preco:
-            prod_barato = preco
+          if preco < preco_barato:
+            preco_barato = preco
+            prod_barato = prod
         total_compra += preco
         if preco > 1000.00:
-          produto_caro += 1
+          preco_caro += 1
         opcao = ' '
         while opcao not in 'SN':
           opcao = str(input("Quer continuar? ")).strip().upper()[0]
@@ -1034,8 +1037,8 @@ while True:
           break
       print(f"{'FIM DO PROGRAMA':-^25}")
       print(f"O total da compra foi R${total_compra:.2f}")
-      print(f"Temos {produto_caro} produtos custando mais de R$1000.00")
-      print(f"O produto mais barato foi ")
+      print(f"Temos {preco_caro} produtos custando mais de R$1000.00")
+      print(f"O produto mais barato foi {prod_barato} custando R${preco_barato:.2f}")
       #Incompleto
   
   
