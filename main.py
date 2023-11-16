@@ -1039,8 +1039,35 @@ while True:
       print(f"O total da compra foi R${total_compra:.2f}")
       print(f"Temos {preco_caro} produtos custando mais de R$1000.00")
       print(f"O produto mais barato foi {prod_barato} custando R${preco_barato:.2f}")
-      #Incompleto
-  
+
+
+    case '71':
+      print('=' * 25)
+      print(f"{'D71 - Caixa Eletrônico':^25}")
+      print('=' * 25)
+      saque = int(input("Que valor você quer sacar? R$"))      
+      print('=' * 25)
+      #As Cédulas são R$50 R$20 R$10 R$1
+      saldo = saque
+      cedula = 50
+      while True:
+        if saldo >= cedula:
+          totcedula = saque // cedula
+          saldo = saque % cedula
+          print(f"Total de {totcedula} de R${cedula}")
+          saque = saldo
+        if saldo == 0:
+          break
+        match cedula:
+          case 50:
+            cedula = 20
+          case 20:
+            cedula = 10
+          case 10:
+            cedula = 1            
+      print("Fim")
+      #revisar
+
   
     case _:
       print("Infálido ou ainda não existe!")
