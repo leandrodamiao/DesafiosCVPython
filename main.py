@@ -1047,7 +1047,6 @@ while True:
       print('=' * 25)
       saque = int(input("Que valor você quer sacar? R$"))      
       print('=' * 25)
-      #As Cédulas são R$50 R$20 R$10 R$1
       saldo = saque
       cedula = 50
       while True:
@@ -1065,8 +1064,31 @@ while True:
             cedula = 10
           case 10:
             cedula = 1            
-      print("Fim")
-      #revisar
+      print("Fim caixa eletrônico, volte sempre!")
+
+
+    case '71b':
+      print('=' * 25)
+      print(f"{'D71 - Caixa Eletrônico':^25}")
+      print('=' * 25)
+      valor = int(input('Quanto dinheiro deseja sacar? '))
+      print(f'==> {valor // 50} notas de R$50') if valor // 50 > 0 else False
+      valor %= 50
+      print(f'==> {valor // 20} notas de R$20') if valor // 20 > 0 else False
+      valor %= 20
+      print(f'==> {valor // 10} notas de R$10') if valor // 10 > 0 else False
+      valor %= 10
+      print(f'==> {valor} notas de R$1') if valor > 0 else False
+
+    case '72':
+      print('=' * 25)
+      print(f"{'D72 - Números por Extenso':^25}")
+      print('=' * 25)
+      numeros = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'douze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+      n = int(input('Digite um número entre 0 e 20: '))
+      while n < 0 or n > 20:
+        n = int(input("Tente novamente. Digite um número entre 0 e 20: "))
+      print(f"Você digitou o número \33[32m{numeros[n]}\33[m")
 
   
     case _:
