@@ -1090,6 +1090,21 @@ while True:
         n = int(input("Tente novamente. Digite um número entre 0 e 20: "))
       print(f"Você digitou o número \33[32m{numeros[n]}\33[m")
 
+    case '73':
+      print('=' * 25)
+      print(f"{'D73 - TImes Futebol 2023':^25}")
+      print('=' * 25)
+      times = ('Palmeiras', 'Botafogo', 'Grêmio', 'Bragantino', 'Atlético-MG', 'Flamengo', 'Athletico-PR', 'Fluminense', 'Cuiabá', 'São Paulo', 'Corinthians', 'Fortaleza', 'Internacional', 'Santos', 'Vasco da Gama', 'Cruzeiro', 'Bahia', 'Goiás', 'Coritiba', 'América-MG')
+      print(times)
+      print('-' * 25)
+      print(f"Os 5 primeiros são: \33[32m{times[:5]}\33[m")
+      print('-' * 25)
+      print(f"Os 4 últimos são \33[31m{times[-4:]}\33[m")
+      print('-' * 25)
+      print(f"Times em ordem alfabética \33[34m{sorted(times)}\33[m")
+      print('-' * 25)
+      print(f"O \33[35mFluminense\33[m esta na {times.index('Fluminense')+1}")
+
   
     case _:
       print("Infálido ou ainda não existe!")
