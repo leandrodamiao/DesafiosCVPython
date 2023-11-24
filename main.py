@@ -1103,8 +1103,36 @@ while True:
       print('-' * 25)
       print(f"Times em ordem alfabética \33[34m{sorted(times)}\33[m")
       print('-' * 25)
-      print(f"O \33[35mFluminense\33[m esta na {times.index('Fluminense')+1}")
+      print(f"O \33[35mFluminense\33[m esta na {times.index('Fluminense')+1}º posição.")
 
+    case '74':
+      print('=' * 25)
+      print(f"{'D74 - Valores em Tuplas':^25}")
+      print('=' * 25)
+      valores = (randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10), randint(0, 10))
+      print(f"O valores sorteados foram: ", end='')
+      for valor in valores:
+        print(valor, end=' ')
+      print(f"\nO maior valor sorteado foi {max(valores)}")
+      print(f"O menor valor sorteado foi {min(valores)}")
+
+    case '75':
+      print('=' * 25)
+      print(f"{'D75 - Análise de dados':^25}")
+      print('=' * 25)
+      numeros =(
+        int(input('Digite um núemro: ')), int(input('Digite outro número: ')), int(input('Digite mai um número: ')), int(input('Digite o último número: '))
+      )
+      print(f"Você digitou os valores {numeros}")
+      print(f"O valor 9 apareceu {numeros.count(9)} vezes")
+      if 3 in numeros:
+        print(f"O valor 3 apareceu na {numeros.index(3)+1}ª posição")
+      else:
+        print('O valor 3 não foi digitado')
+      print("Os valores pares digitados foram: ")
+      for numero in numeros:
+        if numero % 2 ==0:
+          print(numero, end=' ')
   
     case _:
       print("Infálido ou ainda não existe!")
