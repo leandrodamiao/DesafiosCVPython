@@ -1136,7 +1136,7 @@ while True:
 
     case '76':
       print('=' * 25)
-      print(f"{'D76 - Tupla de Preços':^25}")
+      print(f"{'D76 - Listagem de Preços':^25}")
       print('=' * 25)
       produtos = 'Lápis', 1.75, 'borracha', 2.00, 'Caderno', 15.90, 'Estojo', 25.00, 'Trasnferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livro', 34.90
       for c, produto in enumerate(produtos):
@@ -1145,6 +1145,35 @@ while True:
         else:
           print(f"R${produto:>7}")
           
+    case '77':
+      print('=' * 25)
+      print(f"{'D77 - Contando Vogais':^25}")
+      print('=' * 25)
+      palavras = 'APRENDER', 'PROGRAMAR', 'LINGUAGEM', 'PYTHON', 'CURSO', 'GRATIS', 'ESTUDAR', 'PRATICAR', 'TRABALHAR', 'MERCADO', 'PROGRAMADOR', 'FUTURO', 
+      for palavra in palavras:
+        print(f"\nNa palavra {palavra} temos ", end='')
+        for letra in palavra:
+          if letra in 'AEIOU':
+            print(letra.lower(), end=' ')
+            
+    case '78':
+      print('=' * 25)
+      print(f"{'D78 - Maior Menor em Lista':^25}")
+      print('=' * 25)
+      valores = []
+      for pos in range(0, 5):
+        valores.append(int(input(f'Digite um valor para a posição {pos}: ')))
+      print(f"Você digitou os valores {valores}")
+      maior = max(valores)
+      menor = min(valores)
+      print(f"O maior valor digitado foi {maior} na(s) posição(ções)", end=' ')
+      for p, valor in enumerate(valores):
+        if valor == maior:
+          print(p, end='... ')
+      print(f"\nO menor valor digitado foi {menor} na(s) porsição(ções)", end=' ')
+      for p, valor in enumerate(valores):
+        if valor == menor:
+          print(p, end ='... ')
   
     case _:
       print("Infálido ou ainda não existe!")
