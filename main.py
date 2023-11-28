@@ -1133,6 +1133,18 @@ while True:
       for numero in numeros:
         if numero % 2 ==0:
           print(numero, end=' ')
+
+    case '76':
+      print('=' * 25)
+      print(f"{'D76 - Tupla de Preços':^25}")
+      print('=' * 25)
+      produtos = 'Lápis', 1.75, 'borracha', 2.00, 'Caderno', 15.90, 'Estojo', 25.00, 'Trasnferidor', 4.20, 'Compasso', 9.99, 'Mochila', 120.32, 'Canetas', 22.30, 'Livro', 34.90
+      for c, produto in enumerate(produtos):
+        if c % 2 ==0:
+          print(f"{produto:.<13}", end=' ')
+        else:
+          print(f"R${produto:>7}")
+          
   
     case _:
       print("Infálido ou ainda não existe!")
