@@ -1161,8 +1161,8 @@ while True:
       print(f"{'D78 - Maior Menor em Lista':^25}")
       print('=' * 25)
       valores = []
-      for pos in range(0, 5):
-        valores.append(int(input(f'Digite um valor para a posição {pos}: ')))
+      for c in range(0, 5):
+       valores.append(int(input(f'Digite um valor para a posição {c}: ')))
       print(f"Você digitou os valores {valores}")
       maior = max(valores)
       menor = min(valores)
@@ -1174,6 +1174,26 @@ while True:
       for p, valor in enumerate(valores):
         if valor == menor:
           print(p, end ='... ')
+
+    case '79':
+      print('=' * 25)
+      print(f"{'D79 - Únicos em Lista':^25}")
+      print('=' * 25)
+      lista_numeros = []
+      while True:
+        n = int(input('Digite um valor: '))
+        if n not in lista_numeros:
+          lista_numeros.append(n)
+          print('Valor adicionado com sucesso...')
+        else:
+          print('Valor duplicado! Não adicionado...')
+        opcao = ' '
+        while opcao not in 'SN':
+          opcao = str(input('Quer continuar? [S/N]')).strip().upper()[0]
+        if opcao == "N":
+          break
+      lista_numeros.sort()
+      print(f"Os valores digitados foram {lista_numeros}")
   
     case _:
       print("Infálido ou ainda não existe!")
