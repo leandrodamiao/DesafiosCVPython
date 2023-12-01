@@ -1194,6 +1194,25 @@ while True:
           break
       lista_numeros.sort()
       print(f"Os valores digitados foram {lista_numeros}")
+      
+    case '80':
+      print('=' * 25)
+      print(f"{'D80 - Lista Ordenada':^25}")
+      print('=' * 25)
+      numeros = []
+      for c in range (1, 6):
+        n = int(input('Digite um valor: '))
+        if c == 1 or n >= max(numeros):
+          print('Adicionado na úlrima posição')
+          numeros.append(n)
+        else:
+          for k, numero in enumerate(numeros):
+            if n < numero:
+              numeros.insert(k, n)
+              print(f"Acidionado na {k+1}ª posição")
+              break
+      print(numeros)
+                        
   
     case _:
       print("Infálido ou ainda não existe!")
