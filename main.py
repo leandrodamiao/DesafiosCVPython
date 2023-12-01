@@ -1231,7 +1231,31 @@ while True:
       lista.sort(reverse=True)
       print(f"Os valores em orde decrescente são {lista}")
       print('O valor 5 faz parte da lista!' if 5 in lista else 'O valor 5 não faz parte da lista')
-                        
+
+    case '82':
+      print('=' * 25)
+      print(f"{'D82 - Dividindo listas':^25}")
+      print('=' * 25)
+      numeros = []
+      pares = []
+      impares = []
+      while True:
+        n = int(input('Digite um número: '))
+        numeros.append(n)
+        if n % 2 == 0:
+          pares.append(n)
+        else:
+          impares.append(n)
+        op = ' '
+        while op not in "SsNn":
+          op = str(input("Quer Continuar? [S/N] ")).strip()[0]
+        if op in 'Nn':
+          break
+      print('-'*25)
+      print(f"A lista completa é {numeros}")
+      print(f"A lista de pares é {pares}")
+      print(f"A lista de ímpares é {impares}")
+      
   
     case _:
       print("Infálido ou ainda não existe!")
