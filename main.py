@@ -1212,6 +1212,25 @@ while True:
               print(f"Acidionado na {k+1}ª posição")
               break
       print(numeros)
+
+    case '81':
+      print('=' * 25)
+      print(f"{'D80 - Extraindo Dados':^25}")
+      print('=' * 25)
+      cont = 0
+      lista = []
+      while True:
+        lista.append(int(input('Digite um valor: ')))
+        cont += 1
+        op = ' '
+        while op not in 'sSnN':
+          op = str(input('QUer continuar? [S/N]')).strip()[0]
+        if op in 'Nn':
+          break
+      print(f"Você digitou {cont} elementos.")
+      lista.sort(reverse=True)
+      print(f"Os valores em orde decrescente são {lista}")
+      print('O valor 5 faz parte da lista!' if 5 in lista else 'O valor 5 não faz parte da lista')
                         
   
     case _:
