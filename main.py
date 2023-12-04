@@ -1256,6 +1256,25 @@ while True:
       print(f"A lista de pares é {pares}")
       print(f"A lista de ímpares é {impares}")
       
-  
+    case '83':
+      print('=' * 25)
+      print(f"{'D83 - Expressões Mat.':^25}")
+      print('=' * 25)
+      expressao = str(input('Digite a expressão: ')).strip()
+      parentesis=[]
+      for letra in expressao:
+        if letra == '(':
+          parentesis.append(letra)
+        elif letra == ')':
+          if len(parentesis) == 0:
+            parentesis.append(letra)
+            break
+          else:
+            parentesis.pop()
+      if len(parentesis) == 0:
+        print('Sua expressão está válida.')
+      else:
+        print('Sua expressão está errada!')
+      
     case _:
       print("Infálido ou ainda não existe!")
