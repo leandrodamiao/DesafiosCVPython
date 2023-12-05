@@ -1275,6 +1275,80 @@ while True:
         print('Sua expressão está válida.')
       else:
         print('Sua expressão está errada!')
+
+    case '84':
+      print('=' * 25)
+      print(f"{'D84 - Análise Lista Comp.':^25}")
+      print('=' * 25)
+      pessoas = list()
+      dados = list()
+      lista_pesados = list()
+      lista_leves = list()
+      cont = pesado = leve = 0
+      while True:
+        dados.append(str(input('Nome: ')))
+        dados.append(float(input('Peso: ')))
+        if len(pessoas) == 0:
+          pesado = leve = dados[1]
+        else:
+          if dados[1] > pesado:
+            pesado = dados[1]
+          if dados[1] < leve:
+            leve = dados[1]
+        pessoas.append(dados[:])
+        dados.clear()
+        cont += 1
+        op = ' '
+        while op not in 'SN':
+          op = str(input('Quer continuar? [S/N]: ')).strip().upper()
+        if op == 'N':
+          break
+      for pessoa in pessoas:
+        if pessoa[1] == pesado:
+          lista_pesados.append(pessoa[0])
+        if pessoa[1] == leve:
+          lista_leves.append(pessoa[0]) 
+      print('-'*25)
+      print(f"Ao todo, você cadastrou {cont} pessoas.")
+      print(f"O maior peso foi {pesado:.1f}Kg. peso de ", end='')
+      for p in lista_pesados:
+        print(p, end=' ')
+      print(f"\nO menor peso foi de {leve:.1f}Kg. peso de ", end='')
+      for p in lista_leves:
+        print(p, end='')
+      print()
       
+    case '85':
+      print('=' * 25)
+      print(f"{'D85 - Listas Pares/Ímpares':^25}")
+      print('=' * 25)
+      lista=[[], []]
+      for c in range (1, 8):
+        n = int(input(f"Digite o {c}º valor: "))
+        if n % 2 == 0:
+          lista[0].append(n)
+        else:
+          lista[1].append(n)
+      lista[0].sort()
+      lista[1].sort()
+      print(f"Os valores pares digitados foram: {lista[0]}")
+      print(f"Os valores ímpares digitados foram: {lista[1]}")
+
+    case '86':
+      print('=' * 25)
+      print(f"{'D86 - Matriz Python':^25}")
+      print('=' * 25)
+      matriz = [[], [], []]
+      for x in range (0, 3):
+        for y in range(0, 3):
+          matriz[x].append(int(input(f"Digite um valor para [{x}, {y}]: ")))
+      print('-'*25)
+      for x in matriz:
+        for y in x:
+          print(f"[{y:^5}]", end=' ')
+        print()
+        
+  
+  
     case _:
       print("Infálido ou ainda não existe!")
