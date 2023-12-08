@@ -1348,7 +1348,29 @@ while True:
           print(f"[{y:^5}]", end=' ')
         print()
         
-  
+    case '87':
+      print('=' * 25)
+      print(f"{'D87 - Analise/Matriz':^25}")
+      print('=' * 25)
+      matriz = [[], [], []]
+      pares = terceira_coluna = 0
+      for l in range (0, 3):
+        for c in range (0, 3):
+         matriz[l].append(int(input(f"Digite um valor para [{l}, {c}]: ")))
+      print("-"*25)
+      for x in matriz:
+        for p, y in enumerate(x):
+          print(f"[{y:^5}]", end=' ')
+          if y % 2 == 0:
+            pares += y
+          if p == 2:
+            terceira_coluna += y
+        print()
+      print('-'*25)
+      print(f"A soma dos valores pares é {pares}")
+      print(f"A soma dos valores da terceira coluna é {terceira_coluna}")
+      print(f"O maior valor da segunda linha é {max(matriz[1])}")
+      
   
     case _:
       print("Infálido ou ainda não existe!")
