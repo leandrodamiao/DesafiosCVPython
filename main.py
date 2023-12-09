@@ -1371,6 +1371,26 @@ while True:
       print(f"A soma dos valores da terceira coluna é {terceira_coluna}")
       print(f"O maior valor da segunda linha é {max(matriz[1])}")
       
-  
+    case '88':
+      print('=' * 25)
+      print(f"{'D88 - MEGA SENA':^25}")
+      print('=' * 25)
+      jogada = []
+      jogos = list()
+      q = int(input('Quantos jogos você quer que eu sorteir? '))
+      print(f"{f' Sorteando {q} jogos ':-^25}")
+      for c in range (1, q+1):
+        while len(jogada) != 6:
+          n = randint(1, 60)
+          if n not in jogada:
+            jogada.append(n)
+        jogada.sort()
+        print(f"Jogo {c}: {jogada}")
+        jogos.append(jogada[:])
+        jogada.clear()
+        sleep(0.8)
+      print(f"{' BOA SORTE! ':*^25}")
+
+      
     case _:
       print("Infálido ou ainda não existe!")
