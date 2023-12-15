@@ -1391,6 +1391,43 @@ while True:
         sleep(0.8)
       print(f"{' BOA SORTE! ':*^25}")
 
+    case '89':
+      print('=' * 25)
+      print(f"{'D89 - Bolerim':^25}")
+      print('=' * 25)
+      boletim = list()
+      while True:
+        nome = str(input('Nome: '))
+        nota1 = float(input('Nota 1: '))
+        nota2 = float(input('Nota 2: '))
+        media = (nota1 + nota2)/2
+        boletim.append([nome, [nota1, nota2], media])
+        op = ' '
+        while op not in 'SsNn':
+          op = str(input('Quer continuar? [S/N]'))
+        if op in 'Nn':
+          break
+      print('-'*25)
+      print(f'No', f"{'nome':<15}", 'MÉDIA')
+      for n, aluno in enumerate(boletim):
+        print(n, end='  ')
+        print(f"{f'{aluno[0]}':<16}", end='')
+        print(f"{aluno[2]:^5.1f}")
+      print('-'*25)
+      while True:
+        escolha = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
+        if escolha == 999:
+          print('Programa Finalizado, volte sempre!')
+          break
+        elif escolha >= len(boletim):
+          print('Inválido, aluno não cadastrado! Tente novamente.')
+        else:
+          print('Notas do ', boletim[escolha][0], 'são', boletim[escolha][1])
+          print('-'*25)
+        
+
+
+      
       
     case _:
       print("Infálido ou ainda não existe!")
