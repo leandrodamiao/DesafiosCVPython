@@ -1424,10 +1424,24 @@ while True:
         else:
           print('Notas do ', boletim[escolha][0], 'são', boletim[escolha][1])
           print('-'*25)
+
+    case '90':
+      print('=' * 25)
+      print(f"{'D89 - Dicionário Python':^25}")
+      print('=' * 25)
+      aluno = {}
+      aluno['nome'] = str(input('Nome: '))
+      aluno['media'] = float(input(f'Média de {aluno["nome"]}: '))
+      if aluno['media'] >= 7:
+        aluno['situação'] = 'APROVADO'
+      elif aluno['media'] >= 5:
+        aluno['situação'] = 'RECUPERAÇÂO'
+      else:
+        aluno['situação'] = 'REPROVADO'
+      print('-'*25)
+      for k, v in aluno.items():
+        print(f'- {k} é igual a {v}')
         
-
-
-      
       
     case _:
       print("Infálido ou ainda não existe!")
