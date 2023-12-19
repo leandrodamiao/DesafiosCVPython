@@ -4,6 +4,7 @@ import pygame
 from time import sleep
 from datetime import date
 import emoji
+from operator import itemgetter
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -1441,6 +1442,23 @@ while True:
       print('-'*25)
       for k, v in aluno.items():
         print(f'- {k} é igual a {v}')
+
+    case '91':
+      print('=' * 25)
+      print(f"{'D91 - Jogando Dados':^25}")
+      print('=' * 25)
+      jogadores = {}
+      ranking = {}
+      for j in range(1, 5):
+        jogadores[f'jogador{j}'] = randint(0, 6)
+        print(f'O jogador{j} tirou {jogadores[f"jogador{j}"]} no dado.')
+        sleep(1)
+      print('-'*25)
+      print(f"{'== RANKGING ==':^25}")
+      ranking = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
+      for i, v in enumerate(ranking):
+        print(f'{i}º lugar: {v[0]} com {v[1]}')
+        sleep(1)
         
       
     case _:
