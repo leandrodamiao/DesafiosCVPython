@@ -1459,7 +1459,22 @@ while True:
       for i, v in enumerate(ranking):
         print(f'{i}º lugar: {v[0]} com {v[1]}')
         sleep(1)
-        
-      
+
+    case '92':
+      print('=' * 25)
+      print(f"{'D92 - Cadastro Trabalho':^25}")
+      print('=' * 25)
+      cadastro = dict()
+      cadastro['nome'] = str(input('Nome: '))
+      cadastro['idade'] = date.today().year - int(input('Ano de Nascimento: '))
+      cadastro['ctps'] = int(input('Carteira de Trabalho (0 não tem): '))
+      if cadastro['ctps'] != 0:
+        cadastro['contratação'] = int(input('Ano de Contratação: '))
+        cadastro['salario'] = float(input('Salário: R$'))
+        cadastro['aposentadoria'] = cadastro['idade'] + ((cadastro['contratação'] + 35) - date.today().year)
+      print('-'*25)
+      for k, v in cadastro.items():
+        print(f'  - {k} tem valor {v}')
+  
     case _:
       print("Infálido ou ainda não existe!")
