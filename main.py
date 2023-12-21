@@ -1475,6 +1475,27 @@ while True:
       print('-'*25)
       for k, v in cadastro.items():
         print(f'  - {k} tem valor {v}')
+
+    case '93':
+      print('=' * 25)
+      print(f"{'D93 - Cadastro Jogador':^25}")
+      print('=' * 25)
+      jogador = {'nome':'','gols':list(),'total': 0}
+      jogador['nome'] = str(input('Nome do jogador: '))
+      partida = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))
+      for c in range(1, partida +1):
+        jogador['gols'].append(int(input(f'Quantos gols na {c}ª partida? ')))
+      jogador['total'] = sum(jogador['gols'])
+      print('-'*25)
+      print(jogador)
+      print('-'*25)
+      for k, v in jogador.items():
+        print(f'O campo {k} tem o valor {v}')
+      print('-'*25)
+      for p, gol in enumerate(jogador['gols']):
+        print(f' => Na partida {p+1}, fez {gol} gols.')
+      print(f'Foi um total de {jogador["total"]} gols.')
+        
   
     case _:
       print("Infálido ou ainda não existe!")
