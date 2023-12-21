@@ -1492,6 +1492,7 @@ while True:
       for k, v in jogador.items():
         print(f'O campo {k} tem o valor {v}')
       print('-'*25)
+      print(f'O jogador {jogador["nome"]} jogou {len(jogador["gols"])} partidas.')
       for p, gol in enumerate(jogador['gols']):
         print(f' => Na partida {p+1}, fez {gol} gols.')
       print(f'Foi um total de {jogador["total"]} gols.')
