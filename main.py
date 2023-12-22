@@ -1497,6 +1497,44 @@ while True:
         print(f' => Na partida {p+1}, fez {gol} gols.')
       print(f'Foi um total de {jogador["total"]} gols.')
         
-  
+    case '94':
+      print('=' * 25)
+      print(f"{'D94 - Dicionários/Listas':^25}")
+      print('=' * 25)
+      pessoas = []
+      soma_idade = 0
+      muleres = 0
+      while True:
+        nome = str(input('Nome: '))
+        while True:
+          sexo = str(input('Sexo: [M/F]'))[0].strip().upper()
+          if sexo not in 'MF':
+            print('Favor apenas M ou F.')
+          else:
+            break
+        idade = int(input('Idade: '))
+        soma_idade += idade
+        pessoas.append({'nome': nome, 'sexo': sexo, 'idade': idade})
+        while True:
+          op = str(input('Deseja continuar? [S/N]'))[0].strip().upper()
+          if op not in 'SN':
+            print('Erro! Favor apenas S ou N!')
+          else:
+            break
+        if op == 'N':
+          break
+      print('-'*25)
+      print(f'A) Ao todo temos {len(pessoas)} pessoas cadastradas.')
+      print(f'B) A média de idade é {soma_idade/len(pessoas):5.2f} anos.')
+      print(f'C) As mulheres cadastradas foram ', end='')
+      for p in pessoas:
+        if p['sexo'] == 'F':
+          print(p['nome'], end=' ')
+      print()
+      print(f'D) Lista das pessoas acima da média:')
+      for p in pessoas:
+        if p['idade'] > soma_idade/len(pessoas):
+          print(f'  Nome = {p["nome"]}; sexo = {p["sexo"]}; idade = {p["idade"]};')
+      
     case _:
       print("Infálido ou ainda não existe!")
