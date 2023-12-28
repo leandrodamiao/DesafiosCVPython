@@ -1535,6 +1535,49 @@ while True:
       for p in pessoas:
         if p['idade'] > soma_idade/len(pessoas):
           print(f'  Nome = {p["nome"]}; sexo = {p["sexo"]}; idade = {p["idade"]};')
-      
+          
+    case '95':
+      print('=' * 25)
+      print(f"{'D94 - Dicionário Jogadores':^25}")
+      print('=' * 25)
+      jogadores = []
+      gols = []
+      while True:
+        nome = str(input('Nome do jogador: '))
+        partidas = int(input(f'Quantas partidas {nome} jogou?'))
+        for g in range(1, partidas +1):
+          gols.append(int(input(f'Quantos gols na {g}ª partida? ')))
+        total = sum(gols)
+        jogadores.append({'nome' : nome, 'gols' : gols.copy(), 'total': total})
+        gols.clear()
+        while True:
+          op = str(input('Quer continuar? [S/N]: '))[0].strip().upper()
+          if op not in 'SN':
+            print('Inválido! Apenas S ou N')
+          else:
+            break
+        if op == 'N':
+          break
+      print('-'*25)
+      print('cod nome   gols    total')
+      print('-'*25)
+      for c, jogador in enumerate(jogadores):
+        print(f'{c:<4}{jogador["nome"]:<7}{str(jogador["gols"]):<7}{jogador["total"]:>3}')
+      print('-'*25)
+      while True:
+        op = int(input('Quer mostrar os dados de qual jogador? (999 para parar)'))
+        if op <= len(jogadores):
+          print(f'-- Levantamento do jogador {jogadores[op]["nome"]}:')
+          for c, v in enumerate(jogadores[op]["gols"]):
+            print(f'     No jogo {c+1} fez {v} gols.')
+          print('-'*25)
+        elif op == 999:
+          break
+        else:
+          print(f'Não existe jogador com o código {op}!')
+          print('-'*25)
+      print('Volte Sempre!!!')
+
+  
     case _:
       print("Infálido ou ainda não existe!")
