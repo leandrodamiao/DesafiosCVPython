@@ -1578,6 +1578,18 @@ while True:
           print('-'*25)
       print('Volte Sempre!!!')
 
+    case '96':
+      print('=' * 25)
+      print(f"{'D96 - Controle de Terrenos':^25}")
+      print('=' * 25)
+      def area(l, c):
+        print(f'A área de um terreno {l:.1f}x{c:.1f} é de {l*c:.1f}m².')
+
+  
+      print('-'*25)
+      largura = float(input('LARGURA (m): '))
+      comprimento = float(input('COMPRIMENTO (m): '))
+      area(largura, comprimento)
   
     case _:
       print("Infálido ou ainda não existe!")
