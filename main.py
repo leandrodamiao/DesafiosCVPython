@@ -1590,6 +1590,25 @@ while True:
       largura = float(input('LARGURA (m): '))
       comprimento = float(input('COMPRIMENTO (m): '))
       area(largura, comprimento)
+
+    case '97':
+      print('=' * 25)
+      print(f"{'D97 - Print Especial':^25}")
+      print('=' * 25)
+      def escreva(mensagem):
+        espaco = len(mensagem) + 4
+        print('~'*espaco)
+        print(f'  {mensagem}  ')
+        print('~'*espaco)
+
+
+      escreva(str(input('Digite algo: ')))
+        
+
+    #case '':
+      #print('=' * 25)
+      #print(f"{'D9 - ':^25}")
+      #print('=' * 25)
   
     case _:
       print("Infálido ou ainda não existe!")
