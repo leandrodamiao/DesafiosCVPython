@@ -1683,6 +1683,31 @@ while True:
       fim = int(input('Fim: '))
       passo = int(input('Passo:'))
       contador(inicio, fim, passo)
+
+    case '99':
+      print('=' * 25)
+      print(f"{'D9 - Maio valor':^25}")
+      print('=' * 25)
+      def maior_valor(*num):
+        print('Analisando os valores passados...')
+        if len(num) == 0:
+          print('Foram informados 0 valores ao todo.')
+          print('O maior valor informado foi 0.')
+        else:
+          for n in num:
+            print(n, end=' ', flush=True)
+            sleep(0.5)
+          print(f'Foram informados {len(num)} valores ao todo.')
+          print(f'O maior valor informado foi {max(num)}.')
+        print('-'*25)
+
+
+      # Programa Principal
+      maior_valor(randint(0,9), randint(0,9), randint(0,9), randint(0,9), randint(0,9), randint(0,9), randint(0,9))
+      maior_valor(randint(0,9), randint(0,9), randint(0,9))
+      maior_valor(randint(0,9), randint(0,9))
+      maior_valor(randint(0,9))
+      maior_valor()
   
     case _:
       print("Infálido ou ainda não existe!")
