@@ -1603,12 +1603,86 @@ while True:
 
 
       escreva(str(input('Digite algo: ')))
-        
 
-    #case '':
-      #print('=' * 25)
-      #print(f"{'D9 - ':^25}")
-      #print('=' * 25)
+    case '98a':
+      print('=' * 25)
+      print(f"{'D9 - Função Contador':^25}")
+      print('=' * 25)
+
+      def contador():
+        print('Contagem de 1 até 10 de 1 em 1:')
+        for c in range (1, 11):
+          print(c, end=' ', flush=True)
+          sleep(0.5)
+        print('FIM!')
+        print('-'*25)
+        print('Contafem de 10 até 0 de 2 em 2:')
+        for c in range(10 , -1, -2):
+          print(c, end=' ', flush=True)
+          sleep(0.5)
+        print('FIM!')
+        print('-'*25)
+        
+        print('Agora é sua vez de personalizar a contagem!')
+        i = int(input('Início:'))
+        f = int(input('Fim: '))
+        if f > 0:
+          f += 1
+        elif f < 0:
+          f -= 1
+        p = int(input('Passo: '))
+        if i > f:
+          if p > 0:
+            p = -p
+        else:
+          if p < 0:
+            p = -p
+        for c in range(i, f, p):
+          print(c, end=' ', flush=True)
+          sleep(0.5)
+        print('FIM!')
+
+
+      contador()
+
+    case '98':
+      print('=' * 25)
+      print(f"{'D9 - Função Contador':^25}")
+      print('=' * 25)
+      def contador(i, f, p):
+        if p < 0:
+          p *= -1
+        if p == 0:
+          p = 1
+        if i < f:
+          while True:
+            print(i, end=' ', flush=True)
+            sleep(0.5)
+            i += p
+            if i >= f:
+              break
+          print('FIM!')
+        elif i > f:
+          while True:
+            print(i, end=' ', flush=True)
+            sleep(0.5)
+            i -= p
+            if i <= f:
+              break
+          print('FIM!')
+
+
+      print('Contagem de 1 até 10 de 1 em 1:')
+      #contador(1, 10, 1)
+      print('-'*25)
+      print('Contagem de 10 até 0 de 2 em 2:')
+      #contador(10, 0, 2)
+      print('-'*25)
+      print('Agora é a sua vez de personalizar o a contagem! ')
+      inicio = int(input('Inicio: '))
+      fim = int(input('Fim: '))
+      passo = int(input('Passo:'))
+      contador(inicio, fim, passo)
   
     case _:
       print("Infálido ou ainda não existe!")
