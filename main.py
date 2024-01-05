@@ -1673,10 +1673,10 @@ while True:
 
 
       print('Contagem de 1 até 10 de 1 em 1:')
-      #contador(1, 10, 1)
+      contador(1, 10, 1)
       print('-'*25)
       print('Contagem de 10 até 0 de 2 em 2:')
-      #contador(10, 0, 2)
+      contador(10, 0, 2)
       print('-'*25)
       print('Agora é a sua vez de personalizar o a contagem! ')
       inicio = int(input('Inicio: '))
