@@ -1606,7 +1606,7 @@ while True:
 
     case '98a':
       print('=' * 25)
-      print(f"{'D9 - Função Contador':^25}")
+      print(f"{'D98a - Função Contador':^25}")
       print('=' * 25)
 
       def contador():
@@ -1647,7 +1647,7 @@ while True:
 
     case '98':
       print('=' * 25)
-      print(f"{'D9 - Função Contador':^25}")
+      print(f"{'D98 - Função Contador':^25}")
       print('=' * 25)
       def contador(i, f, p):
         if p < 0:
@@ -1688,7 +1688,7 @@ while True:
       print('=' * 25)
       print(f"{'D9 - Maio valor':^25}")
       print('=' * 25)
-      def maior_valor(*num):
+      def maior_valor(* num):
         print('Analisando os valores passados...')
         if len(num) == 0:
           print('Foram informados 0 valores ao todo.')
@@ -1708,6 +1708,33 @@ while True:
       maior_valor(randint(0,9), randint(0,9))
       maior_valor(randint(0,9))
       maior_valor()
+
+    case '100':
+      print('=' * 25)
+      print(f"{'D100 - Sortear e Somar':^25}")
+      print('=' * 25)
+      numeros = list()
+      def sorteio(lista):
+        print('Sorteando 5 valores da lista:',end=' ')
+        for c in range (0, 5):
+          lista.append(randint(0, 9))
+          print(numeros[c],end=' ', flush=True)
+          sleep(0.5)
+        print('PRONTO!')
+
+
+      def somapar(l):
+        pares = 0
+        for n in l:
+          if n % 2 == 0:
+            pares += n
+        print(f'Somando os valores pares de {l}, temos {pares}')
+
+
+      #Programa Principal
+      sorteio(numeros)
+      somapar(numeros)
+      
   
     case _:
       print("Infálido ou ainda não existe!")
