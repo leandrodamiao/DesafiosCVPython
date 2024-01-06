@@ -1,0 +1,8 @@
+Help on function voto in module __main__:
+
+vvoottoo(a)
+    -> Função que calcula a idade com base no ano de nascimento e ano atual e analisa o voto de um candidato.
+    :param a: Ano de nascimento
+    :param i: Idade
+    :Retorna: OBRIGATÒRIO, NEGADO ou OPCIONAL
+    Função criada por Leandro Damião

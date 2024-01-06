@@ -1758,7 +1758,81 @@ while True:
 
       ano = int(input('Em que ano você nasceu? '))
       print(voto(ano))
-        
+
+    case '102':
+      print('=' * 25)
+      print(f"{'D101 - Função Fatorial':^25}")
+      print('=' * 25)
+      def fatorial(n, show=True):
+        '''
+        -> Calcula o fatorial de um número inteiro
+        :Param n: Número a ser calculado.
+        :param f: Resultado do fatorial
+        :param Show: Padrão False, quando True mostra o cálculo
+        :Return: O valor do Fatorial de um número n
+        Criado por Leandro Damião
+        '''
+        f = n
+        for c in range (n-1, 1, -1):
+          f *= c
+        if show:
+          for c in range(n, 1, -1):
+            print(c, end=' x ')
+          print('1 = ', end='')
+          return f
+        else:
+          return f
+          
+
+      print(fatorial(5))
+      print(fatorial(3))
+      print(fatorial(1))
+
+    case '103':
+      print('=' * 25)
+      print(f"{'D103 - Função Ficha':^25}")
+      print('=' * 25)
+      def ficha(nome, gols):
+        '''
+        -> Recebe dois dados de um jogador.
+        :param nome: Nome do jogador
+        :param gols: Quantidade de gols
+        :param resp: resposta do resultado
+        :return: Nome e quantidade de gols no campeonato.
+        Ass.: Leandro Damião
+        '''
+        if nome == '':
+          nome = '<desconhecido>'
+        if gols == '':
+          gols = 0
+        return f'O jogador {nome} fez {gols} gol(s) no campeonato.'
+
+
+      nome = str(input('Nome do jogador: '))
+      gols = str(input('Número de Gols: '))
+      print(ficha(nome, gols))
+
+    case '104':
+      print('=' * 25)
+      print(f"{'D104 - Função Leiaint':^25}")
+      print('=' * 25)
+      def leiaint():
+        '''
+        -> Lê uma string, analiza e só aceita um número.
+        :param dado: imput recebido a ser analisado
+        :Return: O número digitado
+        '''
+        while True:
+          dado = str(input('Digite um número: '))
+          if dado.isnumeric():
+            break
+          else:
+            print('\033[31mERRO! Digiet um número inteiro válido.\033[m')
+        return dado
+
+
+      n = leiaint()
+      print(f'Você acabou de digitar o número {n}')
   
     case _:
       print("Infálido ou ainda não existe!")
