@@ -1734,7 +1734,31 @@ while True:
       #Programa Principal
       sorteio(numeros)
       somapar(numeros)
-      
+
+    case '101':
+      print('=' * 25)
+      print(f"{'D101 - Voto':^25}")
+      print('=' * 25)
+      def voto(a):
+        '''
+        -> Função que calcula a idade com base no ano de nascimento e ano atual e analisa o voto de um candidato.
+        :param a: Ano de nascimento
+        :param i: Idade
+        :Retorna: OBRIGATÒRIO, NEGADO ou OPCIONAL
+        Função criada por Leandro Damião
+        '''
+        i = date.today().year - a
+        if i < 18:
+          return f'Com {i} anos: NÃO VOTA'
+        elif i < 65:
+          return f'Com {i} anos: VOTO OBRIGATÓRIO'
+        elif i > 65:
+          return f'Com {i} anos: VOTO OPCIONAL'
+
+
+      ano = int(input('Em que ano você nasceu? '))
+      print(voto(ano))
+        
   
     case _:
       print("Infálido ou ainda não existe!")
