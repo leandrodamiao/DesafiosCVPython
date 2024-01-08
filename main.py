@@ -1833,6 +1833,36 @@ while True:
 
       n = leiaint()
       print(f'Você acabou de digitar o número {n}')
+
+    case '105':
+      print('=' * 25)
+      print(f"{'D105 - Função Notas':^25}")
+      def notas(*args, sit=False, **kwargs):
+        '''
+        -> Função que analisa as notas e situação de vários alunos.
+        :param args: uma ou várias notas de alunos
+        :param sit: valor opcional, mostra ou não a situação
+        :return: Dicionário com informações sobre a situação da turma
+        '''
+        kwargs['total']=len(args)
+        kwargs['maior']=max(args)
+        kwargs['menor']=min(args)
+        kwargs['media']=round((sum(args)/len(args)), 2)
+        if sit == False:
+          return kwargs
+        else:
+          if kwargs['media'] <= 5:
+            kwargs['situação'] = 'RUIM'
+          elif kwargs['media'] < 7:
+            kwargs['situação'] = 'RAZOÁVEL'
+          else:
+            kwargs['situação'] = 'BOA'
+        return kwargs
+
+
+      resp = notas(5.5, 7, 9.2, 6.5, 10, sit=True)
+      print(resp)
+      
   
     case _:
       print("Infálido ou ainda não existe!")
