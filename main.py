@@ -1748,12 +1748,12 @@ while True:
         Função criada por Leandro Damião
         '''
         i = date.today().year - a
-        if i < 18:
+        if i < 16:
           return f'Com {i} anos: NÃO VOTA'
-        elif i < 65:
-          return f'Com {i} anos: VOTO OBRIGATÓRIO'
-        elif i > 65:
+        elif 16 <= i < 18 or i > 65:
           return f'Com {i} anos: VOTO OPCIONAL'
+        else:
+          return  f'Com {i} anos: VOTO OBRIGATÓRIO'
 
 
       ano = int(input('Em que ano você nasceu? '))
@@ -1803,7 +1803,7 @@ while True:
         '''
         if nome == '':
           nome = '<desconhecido>'
-        if gols == '':
+        if gols == '' or gols.isnumeric()==False:
           gols = 0
         return f'O jogador {nome} fez {gols} gol(s) no campeonato.'
 
