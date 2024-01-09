@@ -1837,6 +1837,7 @@ while True:
     case '105':
       print('=' * 25)
       print(f"{'D105 - Função Notas':^25}")
+      print('=' * 25)
       def notas(*args, sit=False, **kwargs):
         '''
         -> Função que analisa as notas e situação de vários alunos.
@@ -1860,9 +1861,35 @@ while True:
         return kwargs
 
 
-      resp = notas(5.5, 7, 9.2, 6.5, 10, sit=True)
+      resp = notas(5.5, 7, 9.2, 6.5, 10)
       print(resp)
-      
+
+    case '106':
+      print('=' * 25)
+      print(f"{'D106 - Função PyHelp':^25}")
+      print('=' * 25)
+      def pyhelp():
+        while True:
+          print('\033[30;42m-' * 25)
+          print(f"{'Sistema PyHelp':^25}")
+          print('-' * 25)
+          arg = str(input('\033[mFunção ou Biblioteca: '))
+          tam = len(arg) + 14
+          if arg.upper() == 'FIM':
+            break
+          print('\033[44m-' * tam)
+          print(f'  Acessando {arg}  ')
+          print('-\033[m' * tam)
+          sleep(0.5)
+          print(f'\033[7;40m{arg.__doc__}\033[m')
+            
+        print('\033[41m-' * 25)
+        print(f"{'ATÉ LOGO!':^25}")
+        print('-' * 25)
+        print('\033[m')
+
+
+      pyhelp()
   
     case _:
       print("Infálido ou ainda não existe!")
