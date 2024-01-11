@@ -1926,11 +1926,11 @@ while True:
       print(f'Reduzindo 13%, temos {diminuir(p, 13, moeda=True)}')
 
     case '110':
-    print('=' * 25)
-    print(f"{'D110 - Módulo Moeda4.0':^25}")
-    print('=' * 25)
-    p = float(input('Digite o preço: R$'))
-    resumo(p, 80, 35)
+      print('=' * 25)
+      print(f"{'D110 - Módulo Moeda4.0':^25}")
+      print('=' * 25)
+      p = float(input('Digite o preço: R$'))
+      resumo(p, 80, 35)
   
     case _:
       print("Infálido ou ainda não existe!")

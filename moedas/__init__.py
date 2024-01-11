@@ -80,9 +80,9 @@ def resumo(n, a, d):
   print(dobro(n, True))
   print(f'{"Metade do Preço:":17}', end='')
   print(metade(n, True))
-  print(f'{"% de aumento:":17}', end='')
+  print(f'{a}{"% de aumento:":15}', end='')
   print(aumentar(n, a, True))
-  print(f'{"% de redução:":17}', end='')
+  print(f'{d}{"% de redução:":15}', end='')
   print(diminuir(n, a, True))
   print('-'*25)
 
