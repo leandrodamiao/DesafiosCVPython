@@ -1904,7 +1904,33 @@ while True:
       print(f'O dobro de {p} é {dobro(p)}')
       print(f'Aumentando 10%, temos {aumentar(p, 10)}')
       print(f'Reduzindo 13%, temos {diminuir(p, 13)}')
-      
+
+    case '108':
+      print('=' * 25)
+      print(f"{'D108 - Módulo Moeda2.0':^25}")
+      print('=' * 25)
+      p = float(input('Digite o preço: R$'))
+      print(f'A metade de {moeda(p)} é {moeda(metade(p))}')
+      print(f'O dobro de {moeda(p)} é {moeda(dobro(p))}')
+      print(f'Aumentando 10%, temos {moeda(aumentar(p, 10))}')
+      print(f'Reduzindo 13%, temos {moeda(diminuir(p, 13))}')
+
+    case '109':
+      print('=' * 25)
+      print(f"{'D109 - Módulo Moeda3.0':^25}")
+      print('=' * 25)
+      p = float(input('Digite o preço: R$'))
+      print(f'A metade de {moeda(p)} é {metade(p, True)}')
+      print(f'O dobro de {moeda(p)} é {dobro(p, moeda=True)}')
+      print(f'Aumentando 10%, temos {aumentar(p, 10, True)}')
+      print(f'Reduzindo 13%, temos {diminuir(p, 13, moeda=True)}')
+
+    case '110':
+    print('=' * 25)
+    print(f"{'D110 - Módulo Moeda4.0':^25}")
+    print('=' * 25)
+    p = float(input('Digite o preço: R$'))
+    resumo(p, 80, 35)
   
     case _:
       print("Infálido ou ainda não existe!")
