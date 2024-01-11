@@ -5,6 +5,8 @@ from time import sleep
 from datetime import date
 import emoji
 from operator import itemgetter
+import modulos
+from moedas import *
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -173,7 +175,7 @@ while True:
 
     case '16':
       print('=' * 25)
-      print(f"{'D16 - QUbrando um Número':^25}")
+      print(f"{'D16 - Quebrando um Número':^25}")
       print('=' * 25)
       numero = float(input('Digite um valor: '))
       valor_quebrado = math.floor(numero)
@@ -1838,13 +1840,14 @@ while True:
       print('=' * 25)
       print(f"{'D105 - Função Notas':^25}")
       print('=' * 25)
-      def notas(*args, sit=False, **kwargs):
+      def notas(*args, sit=False):
         '''
         -> Função que analisa as notas e situação de vários alunos.
         :param args: uma ou várias notas de alunos
         :param sit: valor opcional, mostra ou não a situação
         :return: Dicionário com informações sobre a situação da turma
         '''
+        kwargs = dict()
         kwargs['total']=len(args)
         kwargs['maior']=max(args)
         kwargs['menor']=min(args)
@@ -1889,7 +1892,19 @@ while True:
         print('\033[m')
 
 
+      # Programa Principal
       pyhelp()
+
+    case '107':
+      print('=' * 25)
+      print(f"{'D107 - Módulo Moeda':^25}")
+      print('=' * 25)
+      p = float(input('Digite o preço: R$'))
+      print(f'A metade de {p} é {metade(p)}')
+      print(f'O dobro de {p} é {dobro(p)}')
+      print(f'Aumentando 10%, temos {aumentar(p, 10)}')
+      print(f'Reduzindo 13%, temos {diminuir(p, 13)}')
+      
   
     case _:
       print("Infálido ou ainda não existe!")
