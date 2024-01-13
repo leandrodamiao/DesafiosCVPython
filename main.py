@@ -6,7 +6,8 @@ from datetime import date
 import emoji
 from operator import itemgetter
 import modulos
-from moedas import *
+from utilidadescev.moedas import *
+from utilidadescev.dados import leiadinheiro
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -1931,6 +1932,19 @@ while True:
       print('=' * 25)
       p = float(input('Digite o preço: R$'))
       resumo(p, 80, 35)
+
+    case '111':
+      print('=' * 25)
+      print(f"{'D110 - Pacote CursoEmVideo':^25}")
+      print('=' * 25)
+      print('Neste desafio foi criado um pacote que organiza os módulos desenvolvidos até o momento.')
+
+    case '112':
+      print('=' * 25)
+      print(f"{'D112 - Módulo LeiaDinheiro':^25}")
+      print('=' * 25)
+      p = leiadinheiro('Digite seu preço: R$')
+      resumo(p, 20, 10)
   
     case _:
       print("Infálido ou ainda não existe!")

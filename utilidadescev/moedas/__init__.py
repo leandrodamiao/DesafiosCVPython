@@ -5,9 +5,8 @@ def metade(n, moeda=False):
   :param moeda: transforma o retorno em moeda brasileira com duas casa decimais (R$)
   :return: valor calculado
   '''
-  #return n / 2 if moeda=False else f'R${n / 2:.2f}'
   if moeda:
-    return f'R${n / 2:.2f}'
+    return f'R${n / 2:.2f}'.replace('.', ',')
   else:
     return n / 2
   
@@ -21,7 +20,7 @@ def dobro(n, moeda=False):
   :return: valor calculado
   '''
   if moeda:
-    return f'R${n * 2:.2f}'
+    return f'R${n * 2:.2f}'.replace('.', ',')
   else:
     return n * 2
   
@@ -35,7 +34,7 @@ def aumentar(n, x=10, moeda=False):
   :return: valor calculado
   '''
   if moeda:
-    return f'R${n + (n * x / 100):.2f}'
+    return f'R${n + (n * x / 100):.2f}'.replace('.', ',')
   else:
     return n + (n * x / 100)
 
@@ -49,7 +48,7 @@ def diminuir(n, x=10, moeda=False):
   :return: valor calculado
   '''
   if moeda:
-    return f'R${n - (n * x / 100):.2f}'
+    return f'R${n - (n * x / 100):.2f}'.replace('.', ',')
   else:
     return n - (n * x / 100)
 
@@ -60,7 +59,7 @@ def moeda(n):
   :param n: Número a ser convertido em moeda
   :retur: String com R$ e duas casas decimais
   '''
-  return f'R${n:.2f}'
+  return f'R${n:.2f}'.replace('.', ',')
 
 
 def resumo(n, a, d):
@@ -69,7 +68,7 @@ def resumo(n, a, d):
   :param n: Número a ser analisado
   :param a: (Aumentar) soma (A)% ao valor
   :param d: (Diminuir) subtrai (D)% do valor
-  :return: 0 - printa uma tabela formatada com o resultado
+  :return: sem retorno - printa uma tabela formatada com o resultado
   '''
   print('-'*25)
   print(f'{"Resumo do valor":^25}')
@@ -83,7 +82,7 @@ def resumo(n, a, d):
   print(f'{a}{"% de aumento:":15}', end='')
   print(aumentar(n, a, True))
   print(f'{d}{"% de redução:":15}', end='')
-  print(diminuir(n, a, True))
+  print(diminuir(n, d, True))
   print('-'*25)
 
 
