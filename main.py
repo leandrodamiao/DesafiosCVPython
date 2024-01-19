@@ -7,7 +7,7 @@ import emoji
 from operator import itemgetter
 import modulos
 from utilidadescev.moedas import *
-from utilidadescev.dados import leiadinheiro, fcores, leiainteiro
+from utilidadescev.dados import leiadinheiro, fcores, leiainteiro, leiareal
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -1951,8 +1951,8 @@ while True:
       print(f"{'D113 - Int e Float':^25}")
       print('=' * 25)
       ni = leiainteiro('Digite um número inteiro: ')
-      nf = leiadinheiro('Digite um número real')
-      print(f'O valor inteiro digitado foi {ni} e o valor real foi {nf:.2f}')
+      nf = leiareal('Digite um número real: ')
+      print(f'O valor inteiro digitado foi {ni} e o valor real foi {nf}')
 
   
     case _:

@@ -1,8 +1,10 @@
+
 def fcores(text='', cor='', fundo=False):
   '''
   -> Função que adiciona cores aos textos.
   :param arg: Texto que será editado
   :param cor: Cor adicionada ao texto
+  :param fundo: Padrão False, se verdadeiro altera as cores de fundo
   :return: Texto formatado com a cor escolhida
   '''
   if fundo: 
@@ -44,10 +46,9 @@ def leiadinheiro(msg):
   while True:
     dado = str(input(msg)).strip().replace(',','.')
     if dado.isalpha() or dado == '':
-      print('Erro! Digite apenas números!')
-      dado = str(input(msg)).strip().replace(',','.')
+      print(fcores('Erro! Digite apenas números!', 'vermelho'))
     else:
-      dado = float(dado)
+      dado = round(float(dado), 2)
       return dado
 
 
@@ -58,12 +59,39 @@ def leiainteiro(msg):
   :return: Apenas números inteiros
   '''
   while True:
-    dado = str(input(msg)).strip()
-    if dado.isnumeric():
-      dado = int(dado)
-      return dado
+    try:
+      n = int(input(msg))
+    except (ValueError, TypeError):
+      print(fcores('Erro, digite apenas números inteiros', 'vermelho'))
+      continue
+    except (KeyboardInterrupt):
+      print(fcores('Entrada de dados interrompida pelo usuário.'))
+      n = 0
+      break
     else:
-      print(fcores('Erro: Favor digite apenas um número inteiro válido.', 'vermelho'))
+      return n
+    
+    
 
 
+def leiareal(msg):
+  '''
+  -> Lê um dado e retorna apenas numéricos reais.
+  :param msg: Mensagem a ser printada na tela
+  :retunr: Apenas números reais
+  '''
+  while True:
+    try:
+      n = float(input(msg))
+    except (ValueError, TypeError):
+      print(fcores('Erro, favor digitar apenas números reais: ', 'vermelho'))
+      continue
+    except (KeyboardInterrupt):
+      print(fcores('Entrada de dados interrompida pelo usuário.'))
+      return 0
+    else:
+      return n
+    
+    
+    
 
