@@ -8,6 +8,9 @@ from operator import itemgetter
 import modulos
 from utilidadescev.moedas import *
 from utilidadescev.dados import leiadinheiro, fcores, leiainteiro, leiareal
+import urllib
+import urllib.request
+
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
 print("")
@@ -1954,6 +1957,23 @@ while True:
       nf = leiareal('Digite um número real: ')
       print(f'O valor inteiro digitado foi {ni} e o valor real foi {nf}')
 
+    case '114':
+      print('='*25)
+      print(f'{"D114 - Site do Pudim":^25}')
+      print('='*25)
+      try:
+        site = urllib.request.urlopen('https://www.pudim.com.br/')
+      except:
+        print('Não consegui abrir o site do pudim')
+      else:
+        print('Consegui abrir o site do pudim')
+
+    case '115':
+      print('='*25)
+      print(f'{"D115 - Cadastro":^25}')
+      print('='*25)
+      print(fcores('Em construção', 'verde', True))
+      
   
     case _:
       print("Infálido ou ainda não existe!")
