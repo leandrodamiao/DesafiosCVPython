@@ -1,11 +1,10 @@
 
-def fcores(text='', cor='', fundo=False, titulo=False):
+def fcores(text='', cor='', fundo=False):
   '''
   -> Função que adiciona cores aos textos.
   :param arg: Texto que será editado
   :param cor: Cor adicionada ao texto
   :param fundo: Padrão False, se verdadeiro altera as cores de fundo
-  :param titulo: Adiciona linhas acima e abaixo do texto alinhando e criando um título
   :return: Texto formatado com a cor escolhida
   '''
   if fundo: 
@@ -33,10 +32,17 @@ def fcores(text='', cor='', fundo=False, titulo=False):
       'cinza' : f'\033[37m{text}\033[m'
     }
   r = cores[cor]
-  if titulo:
-    return f'{fcores("-"*25)}\n', r, f'\n{fcores("-"*25)}'
-  else:
-    return r
+  return r
+
+def ftitulo(arg, arg2='-'):
+  '''
+  -> Função que cria um título centralizado
+  :param arg: Texto que será transformado em título
+  :param arg2: Caracter das linhas superiores e inferiores (Padrão'-')
+  :return: texto formatado
+  '''
+  r = f'{arg2*25}\n{arg:^25}\n{arg2*25}'
+  return r
 
 
 

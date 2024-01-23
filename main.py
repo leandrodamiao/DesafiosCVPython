@@ -7,7 +7,7 @@ import emoji
 from operator import itemgetter
 import modulos
 from utilidadescev.moedas import *
-from utilidadescev.dados import leiadinheiro, fcores, leiainteiro, leiareal
+from utilidadescev.dados import leiadinheiro, fcores, leiainteiro, leiareal, ftitulo
 import urllib
 import urllib.request
 
@@ -1972,7 +1972,7 @@ while True:
       print('='*25)
       print(f'{"D115 - Cadastro":^25}')
       print('='*25)
-      print(fcores('Em construção', 'verde', True))
+      print(fcores(ftitulo('Em construção', '*'), 'amarelo', True))
       
   
     case _:
