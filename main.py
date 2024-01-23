@@ -10,6 +10,7 @@ from utilidadescev.moedas import *
 from utilidadescev.dados import leiadinheiro, fcores, leiainteiro, leiareal, ftitulo
 import urllib
 import urllib.request
+from utilidadescev.desafiofinalcev import *
 
 '''Código dedicado a revisar todo o Curso em Vídeo de Python. O programa pergunta o número do exercício a ser exibido na tela.'''
 
@@ -1973,6 +1974,8 @@ while True:
       print(f'{"D115 - Cadastro":^25}')
       print('='*25)
       print(fcores(ftitulo('Em construção', '*'), 'amarelo', True))
+      fmenu()
+      
       
   
     case _:
