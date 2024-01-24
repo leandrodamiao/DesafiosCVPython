@@ -1,8 +1,9 @@
-
+from time import sleep
 
 '''
 Módulo criado com as funções do desafio 115
 '''
+
 
 def fcores(text='', cor='', fundo=False):
   '''
@@ -39,6 +40,7 @@ def fcores(text='', cor='', fundo=False):
   r = cores[cor]
   return r
 
+
 def fmenu():
   print('-'*25)
   print(f'{"MENU PRINCIPAL":^25}')
@@ -47,3 +49,44 @@ def fmenu():
   print(fcores('2', 'amarelo'), '-',fcores('Cadastrar nova pessoa', 'azul'))
   print(fcores('3', 'amarelo'), '-',fcores('Sair do sistema', 'azul'))
   print('-'*25)
+
+
+def fcadastro(text):
+  '''
+  -> Função que valida dados.
+  :param text: Texto a ser exibido
+  :return: Dado validado
+  '''
+
+  while True:
+    try:
+      op = int(input(fcores(text, 'verde')))
+      match op:
+        case 1:
+          print('-'*25)
+          print(f'{"Opção 1":^25}')
+          print('-'*25)
+          sleep(1)
+  
+        case 2:
+          print('-'*25)
+          print(f'{"Opção 2":^25}')
+          print('-'*25)
+          sleep(1)
+  
+        case 3:
+          print('-'*25)
+          print(f'{"SAINDO DO SISTEMA":^25}')
+          print('-'*25)
+          sleep(1)
+          break
+
+        case _:
+          print(fcores('Erro! Digite uma opção válida!', 'vermelho'))
+          continue
+    except (ValueError, TypeError):
+      print(fcores('Erro. Favor digite um número inteiro válido.', 'vermelho'))
+      continue
+
+
+
