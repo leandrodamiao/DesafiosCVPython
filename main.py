@@ -1973,10 +1973,9 @@ while True:
       print('='*25)
       print(f'{"D115 - Cadastro":^25}')
       print('='*25)
-      print(fcores(ftitulo('Em construção', '*'), 'amarelo', True))
-      fmenu()
-      fcadastro('Sua opção: ')
-      
+      op = fmenu()
+      op
+
       
   
     case _:

@@ -40,8 +40,7 @@ def fcores(text='', cor='', fundo=False):
   r = cores[cor]
   return r
 
-
-def fmenu():
+def finterface_menu():
   print('-'*25)
   print(f'{"MENU PRINCIPAL":^25}')
   print('-'*25)
@@ -51,42 +50,42 @@ def fmenu():
   print('-'*25)
 
 
-def fcadastro(text):
-  '''
-  -> Função que valida dados.
-  :param text: Texto a ser exibido
-  :return: Dado validado
-  '''
-
+def fmenu():
+  finterface_menu()
   while True:
     try:
-      op = int(input(fcores(text, 'verde')))
-      match op:
+      match int(input(fcores('Sua opção: ', 'verde'))):
         case 1:
-          print('-'*25)
-          print(f'{"Opção 1":^25}')
-          print('-'*25)
-          sleep(1)
-  
+          return fconsulta_pessoas()
         case 2:
-          print('-'*25)
-          print(f'{"Opção 2":^25}')
-          print('-'*25)
-          sleep(1)
-  
+          return fcadatra_pessoas()
         case 3:
-          print('-'*25)
-          print(f'{"SAINDO DO SISTEMA":^25}')
-          print('-'*25)
+          print('Saindo...')
           sleep(1)
-          break
-
+          return 
         case _:
-          print(fcores('Erro! Digite uma opção válida!', 'vermelho'))
+          print(fcores('Erro! Digite uma opção válida.', 'vermelho'))
           continue
-    except (ValueError, TypeError):
-      print(fcores('Erro. Favor digite um número inteiro válido.', 'vermelho'))
+    except (TypeError, ValueError):
+      print(fcores('Erro! Digite apenas números inteiros.', 'vermelho'))
       continue
+  
+
+def fconsulta_pessoas():
+  print('-'*25)
+  print(f'{"Opção 1":^25}')
+  print('-'*25)
+  sleep(1)
+  fmenu()
+
+
+def fcadatra_pessoas():
+  print('-'*25)
+  print(f'{"Opção 2":^25}')
+  print('-'*25)
+  sleep(1)
+  fmenu()
+
 
 
 
