@@ -60,8 +60,11 @@ def fmenu():
         case 2:
           return fcadatra_pessoas()
         case 3:
-          print('Saindo...')
+          print('-'*25)
+          print(f'{"Saindo do sistema":^25}')
+          print('_'*25)
           sleep(1)
+          print(fcores('\nAté logo', 'amarelo'))
           return 
         case _:
           print(fcores('Erro! Digite uma opção válida.', 'vermelho'))
@@ -75,6 +78,19 @@ def fconsulta_pessoas():
   print('-'*25)
   print(f'{"Opção 1":^25}')
   print('-'*25)
+  try:
+    with open('cadastro.txt', 'r') as arquivo:
+      print(arquivo.read())
+  except FileNotFoundError:
+    with open('cadastro.txt', 'w') as arquivo:
+      print('Arquivo não encontrado\nVamos criar um arquivo em instantes')
+      print('.', end='', flush=True)
+      sleep(1)
+      print('.', end='', flush=True)
+      sleep(1)
+      print('.')
+      sleep(1)
+      print('Arquivo criado com sucesso')
   sleep(1)
   fmenu()
 

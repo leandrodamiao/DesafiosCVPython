@@ -1973,9 +1973,7 @@ while True:
       print('='*25)
       print(f'{"D115 - Cadastro":^25}')
       print('='*25)
-      op = fmenu()
-      op
-
+      fmenu()
       
   
     case _:
