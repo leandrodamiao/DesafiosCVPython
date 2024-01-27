@@ -21,10 +21,7 @@ print("=" * 25)
 print('')
 
 while True:
-  opcaodesafio = input(
-    print(
-      '\nQUal desafio deseja ver agora? \nTecle s ou sair para finalizar o programa. \n'
-    )).strip()
+  opcaodesafio = input('\nQUal desafio deseja ver agora? \nTecle s ou sair para finalizar o programa.\nOpção: ').strip()
 
   match opcaodesafio:
 

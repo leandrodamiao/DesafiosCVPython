@@ -78,11 +78,15 @@ def fconsulta_pessoas():
   print('-'*25)
   print(f'{"Opção 1":^25}')
   print('-'*25)
+  print(f'{"NOME":15}', f'{"IDADE"}')
   try:
     with open('cadastro.txt', 'r') as arquivo:
-      print(arquivo.read())
+      for linha in arquivo.readlines():
+        s = linha.find(' ')
+        print(f'{linha[:s]:15} {linha[s:]:>5}', end='')
+        #print(l)
   except FileNotFoundError:
-    with open('cadastro.txt', 'w') as arquivo:
+    with open('cadastro.txt', 'x') as arquivo:
       print('Arquivo não encontrado\nVamos criar um arquivo em instantes')
       print('.', end='', flush=True)
       sleep(1)
@@ -99,9 +103,18 @@ def fcadatra_pessoas():
   print('-'*25)
   print(f'{"Opção 2":^25}')
   print('-'*25)
+  nome = str(input('Nome: ')).strip()
+  while True:
+    try:
+      idade=int(input('Idade: '))
+      break
+    except (TypeError, ValueError):
+      print(fcores('Erro! Favor digite apenas números inteiros', 'vermelho'))
+      continue
+  with open('cadastro.txt', 'a') as cadastro:
+    cadastro.write(f'{nome} {idade}\n')
+  print(f'{nome} cadastrado com sucesso')
   sleep(1)
   fmenu()
-
-
 
 
