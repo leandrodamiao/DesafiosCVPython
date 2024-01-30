@@ -82,8 +82,8 @@ def fconsulta_pessoas():
   try:
     with open('cadastro.txt', 'r') as arquivo:
       for linha in arquivo.readlines():
-        s = linha.find(' ')
-        print(f'{linha[:s]:15} {linha[s:]:>5}', end='')
+        s = linha.find(',')
+        print(f'{linha[:s]:15} {linha[s+1:]:>5}', end='')
         #print(l)
   except FileNotFoundError:
     with open('cadastro.txt', 'x') as arquivo:
@@ -112,9 +112,8 @@ def fcadatra_pessoas():
       print(fcores('Erro! Favor digite apenas números inteiros', 'vermelho'))
       continue
   with open('cadastro.txt', 'a') as cadastro:
-    cadastro.write(f'{nome} {idade}\n')
+    cadastro.write(f'{nome},{idade}\n')
   print(f'{nome} cadastrado com sucesso')
   sleep(1)
   fmenu()
-
 
